@@ -24,7 +24,8 @@
     "verbatimModuleSyntax": false,
 
     // Extra types
-    "types": ["node"]
+    "lib": ["es2023", "dom"],
+    "types": []
   },
 
   "include": ["**/*.ts"],
