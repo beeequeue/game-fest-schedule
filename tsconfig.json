@@ -28,6 +28,6 @@
     "types": []
   },
 
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "**/*.vue"],
   "exclude": ["node_modules", "dist", "copy.ts"]
 }

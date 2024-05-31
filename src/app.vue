@@ -17,7 +17,9 @@
         >
           <h1 class="text-center m-0 mb-1">{{ event.name }}</h1>
         </a>
-        <h1 v-else class="text-center m-0 mb-1">{{ event.name }}</h1>
+        <h1 v-else class="text-center m-0 mb-1">
+          {{ event.name }}
+        </h1>
 
         <div class="w-75 flex justify-between text-gray-300">
           <div>{{ formatDate(event.dateTime) }}</div>
@@ -38,7 +40,7 @@ dayjs.extend(relative)
 
 const timeZone = new Intl.DateTimeFormat("en-us", { timeZoneName: "short" })
   .formatToParts(new Date())
-  .find((part) => part.type == "timeZoneName").value
+  .find((part) => part.type === "timeZoneName")!.value
 
 const formatDate = (date: dayjs.Dayjs) => date.format("YYYY-MM-DD HH:mm")
 const formatToNow = (date: dayjs.Dayjs) => date.fromNow()

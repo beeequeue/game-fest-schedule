@@ -2,6 +2,14 @@ import antfu from "@antfu/eslint-config"
 
 export default antfu({
   stylistic: false,
+  vue: {
+    overrides: {
+      "no-console": "off",
+      "vue/block-order": ["error", { order: ["template", "script", "style"] }],
+      "vue/html-self-closing": "off",
+      "vue/singleline-html-element-content-newline": "off",
+    },
+  },
   test: { overrides: { "test/no-import-node-test": "off" } },
   typescript: {
     tsconfigPath: "tsconfig.json",
@@ -11,6 +19,8 @@ export default antfu({
       "ts/consistent-type-definitions": "off",
       "ts/no-unsafe-argument": "off",
       "ts/no-unsafe-assignment": "off",
+      "ts/no-unsafe-member-access": "off",
+      "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
     },
   },
 })
