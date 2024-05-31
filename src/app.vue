@@ -24,7 +24,7 @@
         <div class="w-75 flex justify-between text-gray-300">
           <div>{{ formatDate(event.dateTime) }}</div>
 
-          <div>({{ formatToNow(event.dateTime) }})</div>
+          <div :key="time">({{ formatToNow(event.dateTime) }})</div>
         </div>
       </div>
     </div>
@@ -32,11 +32,18 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue"
 import dayjs from "dayjs"
 import relative from "dayjs/plugin/relativeTime"
-import { events } from "./schedule"
+
+import { events } from "./schedule.js"
 
 dayjs.extend(relative)
+
+const time = ref(0)
+setInterval(() => {
+  time.value++
+}, 2000)
 
 const timeZone = new Intl.DateTimeFormat("en-us", { timeZoneName: "short" })
   .formatToParts(new Date())
