@@ -24,7 +24,10 @@
         <div class="w-75 flex justify-between text-gray-300">
           <div>{{ formatDate(event.dateTime) }}</div>
 
-          <div :key="time">({{ formatToNow(event.dateTime) }})</div>
+          <div v-if="event.dateTime.getTime() < Date.now()" :key="`after-${time}`">
+            ({{ formatToNow(event.dateTime) }} ago)
+          </div>
+          <div v-else :key="`before-${time}`">(in {{ formatToNow(event.dateTime) }})</div>
         </div>
       </div>
     </div>
@@ -33,24 +36,21 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-import dayjs from "dayjs"
-import relative from "dayjs/plugin/relativeTime"
+import { format, formatDistanceToNowStrict } from "date-fns"
 
 import { events } from "./schedule.js"
-
-dayjs.extend(relative)
 
 const time = ref(0)
 setInterval(() => {
   time.value++
-}, 2000)
+}, 1000)
 
 const timeZone = new Intl.DateTimeFormat("en-us", { timeZoneName: "short" })
   .formatToParts(new Date())
   .find((part) => part.type === "timeZoneName")!.value
 
-const formatDate = (date: dayjs.Dayjs) => date.format("YYYY-MM-DD HH:mm")
-const formatToNow = (date: dayjs.Dayjs) => date.fromNow()
+const formatDate = (date: Date) => format(date, "yyyy-MM-dd HH:mm")
+const formatToNow = (date: Date) => formatDistanceToNowStrict(date)
 </script>
 
 <style scoped></style>
