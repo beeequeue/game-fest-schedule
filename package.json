@@ -22,7 +22,7 @@
     "build": "vite build",
     "lint": "eslint src",
     "test": "vitest",
-    "typecheck": "tsc --noEmit --project tsconfig.json",
+    "typecheck": "vue-tsc --noEmit --project tsconfig.json",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
