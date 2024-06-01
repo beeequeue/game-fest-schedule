@@ -2,7 +2,9 @@
   <div class="relative w-full h-full flex flex-col items-center">
     <div class="py-5">
       All times are in
-      <span title="Your guessed local timezone" class="font-bold decoration-underline">{{ timeZone }}</span>
+      <span title="Your guessed local timezone" class="font-bold decoration-underline">
+        {{ timeZone }}
+      </span>
     </div>
 
     <div class="w-full h-full flex flex-col items-center overflow-y-auto last:pb-20">
