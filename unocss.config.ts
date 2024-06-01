@@ -12,7 +12,7 @@ export default defineConfig({
     presetIcons(),
     presetWebFonts({
       fonts: {
-        sans: { name: "Sentient", provider: "fontshare" },
+        sans: { name: "Satoshi", provider: "fontshare" },
       },
     }),
   ],
