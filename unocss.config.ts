@@ -1,12 +1,9 @@
-import {
-  defineConfig,
-  presetIcons,
-  presetUno,
-  presetWebFonts,
-  transformerDirectives,
-} from "unocss"
+import presetUno from "@unocss/preset-uno"
+import presetIcons from "@unocss/preset-icons"
+import presetWebFonts from "@unocss/preset-web-fonts"
+import transformerDirectives from "@unocss/transformer-directives"
 
-export default defineConfig({
+export default {
   presets: [
     presetUno(),
     presetIcons(),
@@ -21,9 +18,9 @@ export default defineConfig({
   rules: [
     [
       /text-outline-(.+)-(.+)/,
-      ([, width, color]) => ({
+      ([, width, color]: [never, string, string]) => ({
         "text-shadow": `-${width}px -${width}px 0 ${color}, ${width}px -${width}px 0 ${color}, -${width}px ${width}px 0 ${color}, ${width}px ${width}px 0 ${color}`,
       }),
     ],
   ],
-})
+}
