@@ -1,10 +1,22 @@
 <template>
   <div class="relative w-full h-full flex flex-col items-center">
-    <div class="py-5">
-      All times are in
-      <span title="Your guessed local timezone" class="font-bold decoration-underline">
-        {{ timeZone }}
-      </span>
+    <div class="relative w-full flex justify-center items-center py-5">
+      <div>
+        All times are in
+        <span title="Your guessed local timezone" class="font-bold decoration-underline cursor-help">
+          {{ timeZone }}
+        </span>
+      </div>
+
+      <a
+        href="https://github.com/BeeeQueue/gamee-fest-schedule"
+        rel="noopener"
+        target="_blank"
+        class="flex items-center absolute right-5 py-2 pl-2 text-white"
+      >
+        Source
+        <div class="i-simple-icons:github w-1.25em h-1.25em ml1.5" />
+      </a>
     </div>
 
     <div class="w-full h-full px-6 flex flex-col items-center overflow-y-auto last:pb-20">
