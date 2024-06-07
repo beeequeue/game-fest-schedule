@@ -7,24 +7,24 @@
       </span>
     </div>
 
-    <div class="w-full h-full flex flex-col items-center overflow-y-auto last:pb-20">
+    <div class="w-full h-full px-6 flex flex-col items-center overflow-y-auto last:pb-20">
       <div
         v-for="(event, index) in events"
         :key="event.name"
         class="relative flex flex-col items-center w-full py-5"
         :class="{
           separator: shouldShowSeparator(index),
-          'pt-6': shouldShowSeparator(index),
+          'pt-8': shouldShowSeparator(index),
         }"
       >
         <div
           v-if="shouldShowSeparator(index)"
-          class="absolute top-1 left-25% text-gray-200"
+          class="absolute top-1 left-5 lg:left-25% text-gray-400"
         >
           {{ formatDayMonth(event.dateTime) }}
         </div>
 
-        <div class="flex flex-col items-center w-fit">
+        <div class="flex flex-col items-center w-fit max-w-full">
           <a
             v-if="event.url"
             :href="event.url"
@@ -32,16 +32,23 @@
             rel="noopener"
             class="block w-full text-center text-white"
           >
-            <h1 class="text-center m-0 mb-1">{{ event.name }}</h1>
+            <h1 class="text-center m-0 mb-2">{{ event.name }}</h1>
           </a>
-          <h1 v-else class="text-center m-0 mb-1">
+          <h1 v-else class="text-center m-0 mb-2">
             {{ event.name }}
           </h1>
 
-          <div class="w-130 flex justify-between text-gray-300">
-            <div>{{ formatDate(event.dateTime) }}</div>
+          <div class="w-130 max-w-full flex lt-sm:flex-col justify-between text-gray-300">
+            <div :class="{'text-center': upNextIndex > index}">
+              {{ formatDate(event.dateTime) }}
+            </div>
 
-            <Countdown :key="time" :date="event.dateTime" :up-next="upNextIndex === index" />
+            <Countdown
+              v-if="upNextIndex <= index"
+              :key="time"
+              :date="event.dateTime"
+              :up-next="upNextIndex === index"
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="tabular-nums">{{ text }}</div>
+  <div class="tabular-nums text-end">{{ text }}</div>
 </template>
 
 <script setup lang="ts">
