@@ -19,7 +19,7 @@
       >
         <div
           v-if="shouldShowSeparator(index)"
-          class="absolute top-1 left-5 lg:left-25% text-gray-400"
+          class="absolute top-1 left-5 md:left-25% text-gray-400"
         >
           {{ formatDayMonth(event.dateTime) }}
         </div>
@@ -38,8 +38,10 @@
             {{ event.name }}
           </h1>
 
-          <div class="w-130 max-w-full flex lt-sm:flex-col justify-between text-gray-300">
-            <div :class="{'text-center': upNextIndex > index}">
+          <div
+            class="max-w-full w-130 flex lt-sm:flex-col lt-sm:text-center justify-between text-gray-300"
+          >
+            <div>
               {{ formatDate(event.dateTime) }}
             </div>
 
