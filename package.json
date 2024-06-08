@@ -30,7 +30,7 @@
     "vue": "3.4.27"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.20.0",
+    "@antfu/eslint-config": "2.21.0",
     "@iconify-json/simple-icons": "1.1.104",
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
