@@ -31,6 +31,7 @@
       >
         <div
           v-if="shouldShowSeparator(index)"
+          :key="time"
           class="absolute top-1 left-5 md:left-25% text-gray-400"
         >
           {{ formatDayMonth(event.dateTime) }}
