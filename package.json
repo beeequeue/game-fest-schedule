@@ -50,7 +50,7 @@
     "simple-git-hooks": "2.11.1",
     "typescript": "5.4.5",
     "vite": "5.2.13",
-    "vue-tsc": "2.0.20"
+    "vue-tsc": "2.0.21"
   },
   "pnpm": {
     "overrides": {
