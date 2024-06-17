@@ -22,8 +22,8 @@ importers:
         specifier: 2.21.1
         version: 2.21.1(@vue/compiler-sfc@3.4.29)(eslint@8.57.0)(typescript@5.4.5)(vitest@1.6.0(@types/node@20.14.2))
       '@iconify-json/simple-icons':
-        specifier: 1.1.105
-        version: 1.1.105
+        specifier: 1.1.106
+        version: 1.1.106
       '@tsconfig/node20':
         specifier: 20.1.4
         version: 20.1.4
@@ -353,8 +353,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@iconify-json/simple-icons@1.1.105':
-    resolution: {integrity: sha512-eSI32492Ga6IR7BhpDy222pSupqshZIVuYllaYHDO0MjmgVvfus5wgXb/U8RXpMZTpcQ/8dNcCK82LkupFqD4w==}
+  '@iconify-json/simple-icons@1.1.106':
+    resolution: {integrity: sha512-3aHpMAgc0UES/ecsCzaXhyBuJVy1AEC/IG03cso6KqvG+DJzrb3LT2ibTTB4uoGGPAmz/mq9df4LqYQhbSrHCA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2527,7 +2527,7 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@iconify-json/simple-icons@1.1.105':
+  '@iconify-json/simple-icons@1.1.106':
     dependencies:
       '@iconify/types': 2.0.0
 
