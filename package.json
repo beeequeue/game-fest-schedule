@@ -34,7 +34,7 @@
     "@iconify-json/simple-icons": "1.1.106",
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "20.14.6",
+    "@types/node": "20.14.7",
     "@unocss/preset-icons": "0.61.0",
     "@unocss/preset-uno": "0.61.0",
     "@unocss/preset-web-fonts": "0.61.0",
@@ -48,7 +48,7 @@
     "lint-staged": "15.2.7",
     "prettier": "3.3.2",
     "simple-git-hooks": "2.11.1",
-    "typescript": "5.4.5",
+    "typescript": "5.5.2",
     "vite": "5.3.1",
     "vue-tsc": "2.0.21"
   },
