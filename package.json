@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.21.1",
-    "@iconify-json/simple-icons": "1.1.107",
+    "@iconify-json/simple-icons": "1.1.108",
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "20.14.9",
