@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "date-fns": "3.6.0",
-    "vue": "3.4.32"
+    "vue": "3.4.33"
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.21.1",
