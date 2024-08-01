@@ -27,21 +27,21 @@
   },
   "dependencies": {
     "date-fns": "3.6.0",
-    "vue": "3.4.34"
+    "vue": "3.4.35"
   },
   "devDependencies": {
     "@antfu/eslint-config": "2.21.1",
-    "@iconify-json/simple-icons": "1.1.109",
+    "@iconify-json/simple-icons": "1.1.111",
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "20.14.12",
-    "@unocss/preset-icons": "0.61.5",
-    "@unocss/preset-uno": "0.61.5",
-    "@unocss/preset-web-fonts": "0.61.5",
-    "@unocss/reset": "0.61.5",
-    "@unocss/transformer-directives": "0.61.5",
-    "@unocss/vite": "0.61.5",
-    "@vitejs/plugin-vue": "5.1.0",
+    "@types/node": "20.14.13",
+    "@unocss/preset-icons": "0.61.9",
+    "@unocss/preset-uno": "0.61.9",
+    "@unocss/preset-web-fonts": "0.61.9",
+    "@unocss/reset": "0.61.9",
+    "@unocss/transformer-directives": "0.61.9",
+    "@unocss/vite": "0.61.9",
+    "@vitejs/plugin-vue": "5.1.1",
     "dotenv": "16.4.5",
     "eslint": "8.57.0",
     "eslint-define-config": "2.1.0",
@@ -49,8 +49,8 @@
     "prettier": "3.3.3",
     "simple-git-hooks": "2.11.1",
     "typescript": "5.5.4",
-    "vite": "5.3.4",
-    "vue-tsc": "2.0.28"
+    "vite": "5.3.5",
+    "vue-tsc": "2.0.29"
   },
   "pnpm": {
     "overrides": {
