@@ -30,7 +30,7 @@
     "vue": "3.4.35"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.21.1",
+    "@antfu/eslint-config": "2.25.0",
     "@iconify-json/simple-icons": "1.1.111",
     "@tsconfig/node20": "20.1.4",
     "@tsconfig/strictest": "2.0.5",
@@ -45,7 +45,7 @@
     "dotenv": "16.4.5",
     "eslint": "8.57.0",
     "eslint-define-config": "2.1.0",
-    "lint-staged": "15.2.7",
+    "lint-staged": "15.2.8",
     "prettier": "3.3.3",
     "simple-git-hooks": "2.11.1",
     "typescript": "5.5.4",
