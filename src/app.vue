@@ -72,11 +72,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue"
 import { format } from "date-fns"
+import { ref } from "vue"
 
-import { events } from "./schedule.js"
 import Countdown from "./countdown.vue"
+import { events } from "./schedule.js"
 
 const upNextIndex = events.findIndex(({ dateTime }) => Date.now() < dateTime.getTime())
 

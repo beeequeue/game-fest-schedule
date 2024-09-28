@@ -17,10 +17,30 @@ export default antfu({
       "no-console": "off",
       "ts/no-use-before-define": "off",
       "ts/consistent-type-definitions": "off",
+      "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
       "ts/no-unsafe-argument": "off",
       "ts/no-unsafe-assignment": "off",
-      "ts/no-unsafe-member-access": "off",
-      "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
+
+      "perfectionist/sort-imports": [
+        "error",
+        {
+          type: "natural",
+          internalPattern: ["@/**", "~/**"],
+          newlinesBetween: "always",
+          groups: [
+            "side-effect",
+            ["builtin", "builtin-type"],
+            ["external", "external-type"],
+            ["internal", "internal-type"],
+            ["parent", "parent-type"],
+            ["sibling", "sibling-type"],
+            ["index", "index-type"],
+            "object",
+            "unknown",
+            "side-effect-style",
+          ],
+        },
+      ],
     },
   },
 })

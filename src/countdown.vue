@@ -3,7 +3,6 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue"
 import {
   addHours,
   formatDistanceToNowStrict,
@@ -11,6 +10,7 @@ import {
   intervalToDuration,
   isWithinInterval,
 } from "date-fns"
+import { computed } from "vue"
 
 const props = defineProps<{ date: Date; upNext: boolean }>()
 
