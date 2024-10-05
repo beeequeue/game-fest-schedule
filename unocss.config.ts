@@ -1,7 +1,8 @@
-import presetUno from "@unocss/preset-uno"
 import presetIcons from "@unocss/preset-icons"
+import presetUno from "@unocss/preset-uno"
 import presetWebFonts from "@unocss/preset-web-fonts"
 import transformerDirectives from "@unocss/transformer-directives"
+import type { VitePluginConfig } from "@unocss/vite"
 
 export default {
   presets: [
@@ -14,13 +15,14 @@ export default {
     }),
   ],
   transformers: [transformerDirectives()],
-  safelist: ["saturate-150", "saturate-250"],
-  rules: [
-    [
-      /text-outline-(.+)-(.+)/,
-      ([, width, color]: [never, string, string]) => ({
-        "text-shadow": `-${width}px -${width}px 0 ${color}, ${width}px -${width}px 0 ${color}, -${width}px ${width}px 0 ${color}, ${width}px ${width}px 0 ${color}`,
-      }),
-    ],
-  ],
-}
+  content: {
+    pipeline: {
+      include: [
+        // Generic JSX files
+        /\.tsx/,
+        // QRLs during Qwik dev, parsed JSX files during Qwik build
+        /_[\da-z]{11}\.js$/,
+      ],
+    },
+  },
+} satisfies VitePluginConfig

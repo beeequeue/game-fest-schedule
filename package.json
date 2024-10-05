@@ -5,9 +5,9 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.12.0",
   "engines": {
-    "node": "^20"
+    "node": "^22"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -18,43 +18,52 @@
     ]
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.server": "vite build -c adapters/node-server/vite.config.ts",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
     "lint": "eslint src",
+    "prepare": "simple-git-hooks",
+    "serve": "node server/entry.node-server",
     "test": "vitest",
-    "typecheck": "vue-tsc --noEmit --project tsconfig.json",
-    "prepare": "simple-git-hooks"
+    "typecheck": "tsc --noEmit --project tsconfig.json"
   },
   "dependencies": {
-    "date-fns": "4.1.0",
-    "vue": "3.5.10"
+    "@unocss/reset": "0.63.1",
+    "date-fns": "4.1.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.7.3",
+    "@builder.io/qwik": "1.9.0",
+    "@builder.io/qwik-city": "1.9.0",
     "@iconify-json/simple-icons": "1.2.4",
-    "@tsconfig/node20": "20.1.4",
+    "@tsconfig/node22": "22.0.0",
     "@tsconfig/strictest": "2.0.5",
     "@types/node": "22.7.4",
-    "@unocss/preset-icons": "0.63.0",
-    "@unocss/preset-uno": "0.63.0",
-    "@unocss/preset-web-fonts": "0.63.0",
-    "@unocss/reset": "0.63.0",
-    "@unocss/transformer-directives": "0.63.0",
-    "@unocss/vite": "0.63.0",
-    "@vitejs/plugin-vue": "5.1.4",
-    "dotenv": "16.4.5",
+    "@unocss/preset-icons": "0.63.1",
+    "@unocss/preset-uno": "0.63.1",
+    "@unocss/preset-web-fonts": "0.63.1",
+    "@unocss/transformer-directives": "0.63.1",
+    "@unocss/vite": "0.63.1",
     "eslint": "9.11.1",
     "eslint-define-config": "2.1.0",
+    "eslint-plugin-qwik": "1.9.0",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
+    "prettier-plugin-tailwindcss": "0.6.8",
     "simple-git-hooks": "2.11.1",
     "typescript": "5.6.2",
-    "vite": "5.4.8",
-    "vue-tsc": "2.1.6"
+    "vite": "5.4.8"
   },
   "pnpm": {
     "overrides": {
-      "hasown": "npm:@nolyfill/hasown@latest"
+      "is-core-module": "npm:@nolyfill/is-core-module@^1",
+      "array-includes": "npm:@nolyfill/array-includes@^1",
+      "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@^1",
+      "object.assign": "npm:@nolyfill/object.assign@^1",
+      "object.values": "npm:@nolyfill/object.values@^1"
     }
   }
 }

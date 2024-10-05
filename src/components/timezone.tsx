@@ -1,0 +1,25 @@
+import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik"
+
+import { FadeIn } from "./fade-in"
+
+export const Timezone = component$(() => {
+  const tzString = useSignal("")
+
+  useVisibleTask$(() => {
+    tzString.value = new Intl.DateTimeFormat("en-us", { timeZoneName: "short" })
+      .formatToParts(new Date())
+      .find((part) => part.type === "timeZoneName")!.value
+  })
+
+  return (
+    <FadeIn show={tzString.value !== ""}>
+      All times are in{" "}
+      <span
+        title="Your guessed local timezone"
+        class={["decoration-underline cursor-help font-bold"]}
+      >
+        {tzString}
+      </span>
+    </FadeIn>
+  )
+})

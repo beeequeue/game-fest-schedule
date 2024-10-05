@@ -1,0 +1,40 @@
+html {
+  background: #111;
+  color: #eee;
+}
+
+body {
+  --at-apply: font-sans;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100% !important;
+  min-height: 100% !important;
+  max-height: 100% !important;
+  width: 100%;
+  overflow: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  line-height: 32px;
+}
+
+.separator {
+  --at-apply: b-0 b-t-2 b-solid b-gray-500;
+}
