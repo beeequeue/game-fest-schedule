@@ -31,6 +31,8 @@ export default defineConfig(({ command, mode }) => ({
           // If a dep-of-dep needs to be external, add it here
           // For example, if something uses `bcrypt` but you don't have it as a dep, you can write
           // external: [...Object.keys(dependencies), 'bcrypt']
+          // @ts-expect-error: Missing property
+          // eslint-disable-next-line ts/no-unsafe-argument
           external: Object.keys(pkgJson.dependencies ?? {}),
         }
       : undefined,
