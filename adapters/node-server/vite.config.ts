@@ -10,5 +10,5 @@ export default extendConfig(baseConfig, {
       input: ["src/entry.node-server.tsx", "@qwik-city-plan"],
     },
   },
-  plugins: [nodeServerAdapter({ name: "node-server" })],
+  plugins: [nodeServerAdapter({ name: "summergamefest" })],
 })
