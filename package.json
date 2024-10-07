@@ -32,8 +32,8 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.7.3",
-    "@builder.io/qwik": "1.9.0",
-    "@builder.io/qwik-city": "1.9.0",
+    "@builder.io/qwik": "1.9.1",
+    "@builder.io/qwik-city": "1.9.1",
     "@iconify-json/simple-icons": "1.2.5",
     "@tsconfig/node22": "22.0.0",
     "@tsconfig/strictest": "2.0.5",
