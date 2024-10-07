@@ -47,7 +47,7 @@
     "date-fns": "4.1.0",
     "eslint": "9.12.0",
     "eslint-define-config": "2.1.0",
-    "eslint-plugin-qwik": "1.9.0",
+    "eslint-plugin-qwik": "1.9.1",
     "lint-staged": "15.2.10",
     "prettier": "3.3.3",
     "prettier-plugin-tailwindcss": "0.6.8",

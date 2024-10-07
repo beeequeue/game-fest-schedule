@@ -64,8 +64,8 @@ importers:
         specifier: 2.1.0
         version: 2.1.0
       eslint-plugin-qwik:
-        specifier: 1.9.0
-        version: 1.9.0(eslint@9.12.0(jiti@2.3.1))
+        specifier: 1.9.1
+        version: 1.9.1(eslint@9.12.0(jiti@2.3.1))
       lint-staged:
         specifier: 15.2.10
         version: 15.2.10
@@ -1481,8 +1481,8 @@ packages:
       vue-eslint-parser:
         optional: true
 
-  eslint-plugin-qwik@1.9.0:
-    resolution: {integrity: sha512-9EsvIVwtpANSj/ICKMoR5aeabDPgPVcW58bxY8N7R/9oQs6piCm7XbFErxAeaGxmhuvpMZsc+7AN5DizDfDdrw==}
+  eslint-plugin-qwik@1.9.1:
+    resolution: {integrity: sha512-H8WKYfFsubQh4rcAGYuZh6gX1pReHZGBwCi3l4bJ+7Oa1XqqBr6E8O70+Jv9RoXg9dH99zfWSdWjap9/N/4Pqw==}
     engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     peerDependencies:
       eslint: ^8.57.0
@@ -4252,7 +4252,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-qwik@1.9.0(eslint@9.12.0(jiti@2.3.1)):
+  eslint-plugin-qwik@1.9.1(eslint@9.12.0(jiti@2.3.1)):
     dependencies:
       eslint: 9.12.0(jiti@2.3.1)
       jsx-ast-utils: 3.3.5
