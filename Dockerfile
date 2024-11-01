@@ -1,5 +1,5 @@
 # deps cache
-FROM node:22-alpine AS install
+FROM node:22.11.0-alpine AS install
 
 ENV PNPM_HOME=/pnpm
 ENV CI=1
@@ -13,7 +13,7 @@ COPY package.json .npmrc pnpm-lock.yaml /tmp/dev/
 
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store cd /tmp/dev && pnpm install --frozen-lockfile
 
-FROM node:22-alpine AS build
+FROM node:22.11.0-alpine AS build
 
 ENV PNPM_HOME=/pnpm
 ENV CI=1
@@ -35,7 +35,7 @@ ENV NODE_ENV=production
 
 RUN pnpm build
 
-FROM node:22-alpine
+FROM node:22.11.0-alpine
 
 ENV PNPM_HOME=/pnpm
 ENV NODE_ENV=production
