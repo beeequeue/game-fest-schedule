@@ -5,11 +5,11 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  is-core-module: npm:@nolyfill/is-core-module@^1
-  array-includes: npm:@nolyfill/array-includes@^1
-  array.prototype.flat: npm:@nolyfill/array.prototype.flat@^1
-  object.assign: npm:@nolyfill/object.assign@^1
-  object.values: npm:@nolyfill/object.values@^1
+  is-core-module: npm:@nolyfill/is-core-module@1.0.39
+  array-includes: npm:@nolyfill/array-includes@1.0.28
+  array.prototype.flat: npm:@nolyfill/array.prototype.flat@1.0.28
+  object.assign: npm:@nolyfill/object.assign@1.0.28
+  object.values: npm:@nolyfill/object.values@1.0.28
 
 importers:
 
@@ -2505,10 +2505,6 @@ packages:
     resolution: {integrity: sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==}
     engines: {node: '>=4'}
 
-  postcss@8.4.47:
-    resolution: {integrity: sha512-56rxCq7G/XfB4EkXq9Egn5GCqugWvDFjafDOThIdMBsI15iqPqR5r15TfSr1YPYeEI19YeaXMCbY6u88Y76GLQ==}
-    engines: {node: ^10 || ^12 || >=14}
-
   postcss@8.4.49:
     resolution: {integrity: sha512-OCVPnIObs4N29kxTjzLfUryOkvZEq+pf8jTF0lg8E7uETuWHA+v7j3c/xJmiqpX450191LlmZfUKkXxkTry7nA==}
     engines: {node: ^10 || ^12 || >=14}
@@ -4140,7 +4136,7 @@ snapshots:
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
       magic-string: 0.30.14
-      postcss: 8.4.47
+      postcss: 8.4.49
       source-map-js: 1.2.1
 
   '@vue/compiler-ssr@3.5.12':
@@ -5848,12 +5844,6 @@ snapshots:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  postcss@8.4.47:
-    dependencies:
-      nanoid: 3.3.7
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
   postcss@8.4.49:
     dependencies:
       nanoid: 3.3.7
@@ -6331,7 +6321,7 @@ snapshots:
   vite@5.4.11(@types/node@22.10.1):
     dependencies:
       esbuild: 0.21.5
-      postcss: 8.4.47
+      postcss: 8.4.49
       rollup: 4.24.0
     optionalDependencies:
       '@types/node': 22.10.1
