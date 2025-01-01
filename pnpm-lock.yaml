@@ -5,11 +5,11 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  is-core-module: npm:@nolyfill/is-core-module@^1
-  array-includes: npm:@nolyfill/array-includes@^1
-  array.prototype.flat: npm:@nolyfill/array.prototype.flat@^1
-  object.assign: npm:@nolyfill/object.assign@^1
-  object.values: npm:@nolyfill/object.values@^1
+  is-core-module: npm:@nolyfill/is-core-module@1.0.39
+  array-includes: npm:@nolyfill/array-includes@1.0.28
+  array.prototype.flat: npm:@nolyfill/array.prototype.flat@1.0.28
+  object.assign: npm:@nolyfill/object.assign@1.0.28
+  object.values: npm:@nolyfill/object.values@1.0.28
 
 importers:
 
@@ -2325,9 +2325,6 @@ packages:
   loupe@3.1.1:
     resolution: {integrity: sha512-edNu/8D5MKVfGVFRhFf8aAxiTM6Wumfz5XsaatSxlD3w4R1d/WEKUTydCdPGbl9K7QG/Ca3GnDV2sIKIpXRQcw==}
 
-  magic-string@0.30.14:
-    resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
-
   magic-string@0.30.17:
     resolution: {integrity: sha512-sNPKHvyjVf7gyjwS4xGTaW/mCnF8wnjtifKBEhxfZ7E/S8tQ0rssrwGNn6q8JH/ohItJfSQp9mBtQYuTlH5QnA==}
 
@@ -4336,7 +4333,7 @@ snapshots:
     dependencies:
       '@vitest/spy': 2.1.2
       estree-walker: 3.0.3
-      magic-string: 0.30.14
+      magic-string: 0.30.17
     optionalDependencies:
       vite: 5.4.11(@types/node@22.10.3)
     optional: true
@@ -4355,7 +4352,7 @@ snapshots:
   '@vitest/snapshot@2.1.2':
     dependencies:
       '@vitest/pretty-format': 2.1.2
-      magic-string: 0.30.14
+      magic-string: 0.30.17
       pathe: 1.1.2
     optional: true
 
@@ -4392,7 +4389,7 @@ snapshots:
       '@vue/compiler-ssr': 3.5.12
       '@vue/shared': 3.5.12
       estree-walker: 2.0.2
-      magic-string: 0.30.14
+      magic-string: 0.30.17
       postcss: 8.4.49
       source-map-js: 1.2.1
 
@@ -5523,10 +5520,6 @@ snapshots:
       get-func-name: 2.0.2
     optional: true
 
-  magic-string@0.30.14:
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.5.0
-
   magic-string@0.30.17:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
@@ -6614,7 +6607,7 @@ snapshots:
   vite-node@2.1.2(@types/node@22.10.3):
     dependencies:
       cac: 6.7.14
-      debug: 4.3.7
+      debug: 4.4.0
       pathe: 1.1.2
       vite: 5.4.11(@types/node@22.10.3)
     transitivePeerDependencies:
@@ -6661,8 +6654,8 @@ snapshots:
       '@vitest/spy': 2.1.2
       '@vitest/utils': 2.1.2
       chai: 5.1.1
-      debug: 4.3.7
-      magic-string: 0.30.14
+      debug: 4.4.0
+      magic-string: 0.30.17
       pathe: 1.1.2
       std-env: 3.7.0
       tinybench: 2.9.0
