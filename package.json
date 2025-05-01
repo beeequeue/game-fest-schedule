@@ -5,7 +5,7 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@10.7.1",
+  "packageManager": "pnpm@10.10.0",
   "engines": {
     "node": "^22"
   },
@@ -32,12 +32,12 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.8.0",
-    "@builder.io/qwik": "1.12.1",
-    "@builder.io/qwik-city": "1.12.1",
-    "@iconify-json/simple-icons": "1.2.30",
+    "@builder.io/qwik": "1.13.0",
+    "@builder.io/qwik-city": "1.13.0",
+    "@iconify-json/simple-icons": "1.2.33",
     "@tsconfig/node22": "22.0.1",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "22.13.16",
+    "@types/node": "22.15.3",
     "@unocss/preset-icons": "66.0.0",
     "@unocss/preset-uno": "66.0.0",
     "@unocss/preset-web-fonts": "66.0.0",
@@ -51,9 +51,9 @@
     "lint-staged": "15.2.10",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "simple-git-hooks": "2.12.1",
-    "typescript": "5.8.2",
-    "vite": "6.2.7"
+    "simple-git-hooks": "2.13.0",
+    "typescript": "5.8.3",
+    "vite": "6.3.4"
   },
   "pnpm": {
     "overrides": {
