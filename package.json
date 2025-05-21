@@ -31,7 +31,7 @@
     "typecheck": "tsc --noEmit --project tsconfig.json"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.8.0",
+    "@antfu/eslint-config": "3.16.0",
     "@builder.io/qwik": "1.13.0",
     "@builder.io/qwik-city": "1.13.0",
     "@iconify-json/simple-icons": "1.2.33",
@@ -45,10 +45,10 @@
     "@unocss/transformer-directives": "66.0.0",
     "@unocss/vite": "66.0.0",
     "date-fns": "4.1.0",
-    "eslint": "9.13.0",
+    "eslint": "9.27.0",
     "eslint-define-config": "2.1.0",
-    "eslint-plugin-qwik": "1.9.1",
-    "lint-staged": "15.2.10",
+    "eslint-plugin-qwik": "1.14.1",
+    "lint-staged": "15.5.2",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
     "simple-git-hooks": "2.13.0",
