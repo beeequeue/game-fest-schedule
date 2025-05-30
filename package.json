@@ -10,10 +10,10 @@
     "node": "^24"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "node_modules/.bin/nano-staged"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,json5,yaml,yml,css,scss,md}": [
+  "nano-staged": {
+    "*.{js,jsx,mjs,cjs,ts,tsx,mts,cts,json,json5,yaml,yml,css,scss,md}": [
       "prettier --write"
     ]
   },
@@ -31,7 +31,7 @@
     "typecheck": "tsc --noEmit --project tsconfig.json"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "3.8.0",
+    "@antfu/eslint-config": "4.13.2",
     "@builder.io/qwik": "1.13.0",
     "@builder.io/qwik-city": "1.13.0",
     "@iconify-json/simple-icons": "1.2.33",
@@ -45,23 +45,13 @@
     "@unocss/transformer-directives": "66.0.0",
     "@unocss/vite": "66.0.0",
     "date-fns": "4.1.0",
-    "eslint": "9.13.0",
-    "eslint-define-config": "2.1.0",
-    "eslint-plugin-qwik": "1.9.1",
-    "lint-staged": "15.2.10",
+    "eslint": "9.27.0",
+    "eslint-plugin-qwik": "1.14.1",
+    "nano-staged": "0.8.0",
     "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.8.3",
     "vite": "6.3.4"
-  },
-  "pnpm": {
-    "overrides": {
-      "is-core-module": "npm:@nolyfill/is-core-module@^1",
-      "array-includes": "npm:@nolyfill/array-includes@^1",
-      "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@^1",
-      "object.assign": "npm:@nolyfill/object.assign@^1",
-      "object.values": "npm:@nolyfill/object.values@^1"
-    }
   }
 }

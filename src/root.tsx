@@ -1,11 +1,11 @@
 import { component$ } from "@builder.io/qwik"
-import { isDev } from "@builder.io/qwik/build"
 import {
   QwikCityProvider,
   type RequestHandler,
   RouterOutlet,
   ServiceWorkerRegister,
 } from "@builder.io/qwik-city"
+import { isDev } from "@builder.io/qwik/build"
 
 import { RouterHead } from "./components/router-head"
 
@@ -15,6 +15,7 @@ import "@unocss/reset/sanitize/sanitize.css"
 import "@unocss/reset/sanitize/typography.css"
 import "@unocss/reset/sanitize/reduce-motion.css"
 import "uno.css"
+
 import "./global.css"
 
 const oneDayInSeconds = 60 * 60 * 24
