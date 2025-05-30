@@ -31,6 +31,7 @@ export default defineConfig(({ command, mode }) => ({
     exclude: [],
   },
 
+  experimental: { enableNativePlugin: true },
   build: { target: ["firefox122", "chrome122", "safari15"] },
   oxc: {
     jsx: {
