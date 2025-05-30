@@ -1,47 +1,46 @@
-# deps cache
-FROM node:24-alpine AS install
+#base
+FROM node:24-alpine AS base
 
 ENV PNPM_HOME=/pnpm
-ENV CI=1
+ENV NODE_OPTIONS="--enable-source-maps --disable-warning=ExperimentalWarning"
+ENV NODE_ENV=production
 
 RUN corepack enable
+
+RUN mkdir /app
+WORKDIR /app
+
+# deps cache
+FROM base AS install
+
+ENV CI=1
 
 # dev
 RUN mkdir -p /tmp/dev
+WORKDIR /tmp/dev
 
-COPY package.json .npmrc pnpm-lock.yaml /tmp/dev/
+RUN \
+    --mount=type=cache,id=pnpm,target=/pnpm/store  \
+    --mount=type=bind,source=package.json,target=/tmp/dev/package.json \
+    --mount=type=bind,source=pnpm-lock.yaml,target=/tmp/dev/pnpm-lock.yaml \
+    --mount=type=bind,source=pnpm-workspace.yaml,target=/tmp/dev/pnpm-workspace.yaml \
+    pnpm install --frozen-lockfile --ignore-scripts
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store cd /tmp/dev && pnpm install --frozen-lockfile
+FROM base AS build
 
-FROM node:24-alpine AS build
-
-ENV PNPM_HOME=/pnpm
 ENV CI=1
-
-WORKDIR /app
-RUN corepack enable
 
 # cached deps
 COPY --from=install /tmp/dev/node_modules /app/node_modules
 
 # App stuff
-COPY package.json .npmrc pnpm-lock.yaml vite.config.ts unocss.config.ts tsconfig.json index.html /app/
+COPY package.json pnpm-workspace.yaml vite.config.ts unocss.config.ts tsconfig.json index.html /app/
 COPY adapters /app/adapters
 COPY src /app/src
 
-# Run with...
-ENV PNPM_HOME=/pnpm
-ENV NODE_ENV=production
+RUN node --run build
 
-RUN pnpm build
-
-FROM node:24-alpine
-
-ENV PNPM_HOME=/pnpm
-ENV NODE_ENV=production
-
-RUN mkdir /app
-WORKDIR /app
+FROM base
 
 # App stuff
 COPY --from=build /app/server /app/server
