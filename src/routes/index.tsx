@@ -29,10 +29,19 @@ export default component$(() => {
         <Timezone />
 
         <a
-          href="https://github.com/BeeeQueue/game-fest-schedule"
+          href="https://bsky.app/profile/haglund.dev"
           rel="noopener"
           target="_blank"
           class="absolute right-5 flex items-center py-2 pl-2 text-white"
+        >
+          beequeue
+          <div class="i-simple-icons:bluesky w-1.25em h-1.25em ml-1.5" />
+        </a>
+        <a
+          href="https://github.com/BeeeQueue/game-fest-schedule"
+          rel="noopener"
+          target="_blank"
+          class="absolute right-5 top-10 flex items-center py-2 pl-2 text-white"
         >
           Source
           <div class="i-simple-icons:github w-1.25em h-1.25em ml-1.5" />
