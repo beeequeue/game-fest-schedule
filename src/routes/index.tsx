@@ -29,7 +29,7 @@ export default component$(() => {
         <Timezone />
 
         <a
-          href="https://github.com/BeeeQueue/gamee-fest-schedule"
+          href="https://github.com/BeeeQueue/game-fest-schedule"
           rel="noopener"
           target="_blank"
           class="absolute right-5 flex items-center py-2 pl-2 text-white"
