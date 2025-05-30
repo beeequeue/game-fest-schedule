@@ -5,9 +5,9 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@10.10.0",
+  "packageManager": "pnpm@10.11.0",
   "engines": {
-    "node": "^22"
+    "node": "^24"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
@@ -35,9 +35,9 @@
     "@builder.io/qwik": "1.13.0",
     "@builder.io/qwik-city": "1.13.0",
     "@iconify-json/simple-icons": "1.2.33",
-    "@tsconfig/node22": "22.0.1",
+    "@tsconfig/node24": "24.0.1",
     "@tsconfig/strictest": "2.0.5",
-    "@types/node": "22.15.3",
+    "@types/node": "22.15.26",
     "@unocss/preset-icons": "66.0.0",
     "@unocss/preset-uno": "66.0.0",
     "@unocss/preset-web-fonts": "66.0.0",
