@@ -41,10 +41,10 @@ export default component$(() => {
           href="https://github.com/BeeeQueue/game-fest-schedule"
           rel="noopener"
           target="_blank"
-          class="absolute right-5 top-10 flex items-center py-2 pl-2 text-white"
+          class="absolute left-5 flex items-center py-2 pr-2 text-white"
         >
+          <div class="i-simple-icons:github w-1.25em h-1.25em mr-1.5" />
           Source
-          <div class="i-simple-icons:github w-1.25em h-1.25em ml-1.5" />
         </a>
       </div>
 
