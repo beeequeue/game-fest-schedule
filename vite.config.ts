@@ -1,5 +1,5 @@
-import { qwikVite } from "@builder.io/qwik/optimizer"
 import { qwikCity } from "@builder.io/qwik-city/vite"
+import { qwikVite } from "@builder.io/qwik/optimizer"
 import UnoCss from "@unocss/vite"
 import { defineConfig } from "vite"
 
@@ -11,11 +11,32 @@ console.log()
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
 export default defineConfig(({ command, mode }) => ({
-  plugins: [qwikCity(), qwikVite({ lint: false }), UnoCss()],
+  plugins: [
+    qwikCity(),
+    qwikVite({ lint: false }),
+    UnoCss(),
+    {
+      name: "fix",
+      enforce: "post",
+      config: (config) => {
+        config.esbuild = false
+
+        return config
+      },
+    },
+  ],
   optimizeDeps: {
     // Put problematic deps that break bundling here, mostly those with binaries.
     // For example ['better-sqlite3'] if you use that in server functions.
     exclude: [],
+  },
+
+  build: { target: ["firefox122", "chrome122", "safari15"] },
+  oxc: {
+    jsx: {
+      runtime: "automatic",
+      importSource: "@builder.io/qwik",
+    },
   },
 
   /**
@@ -32,7 +53,6 @@ export default defineConfig(({ command, mode }) => ({
           // For example, if something uses `bcrypt` but you don't have it as a dep, you can write
           // external: [...Object.keys(dependencies), 'bcrypt']
           // @ts-expect-error: Missing property
-          // eslint-disable-next-line ts/no-unsafe-argument
           external: Object.keys(pkgJson.dependencies ?? {}),
         }
       : undefined,

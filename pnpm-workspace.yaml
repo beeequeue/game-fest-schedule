@@ -16,6 +16,7 @@ overrides:
   is-core-module: npm:@nolyfill/is-core-module@^1
   object.assign: npm:@nolyfill/object.assign@^1
   object.values: npm:@nolyfill/object.values@^1
+  vite: npm:rolldown-vite@latest
 
 savePrefix: ""
 shellEmulator: true
