@@ -1,7 +1,9 @@
-# deadlock
+# summer game fest schedule
 
-<!--
-[![npm](https://img.shields.io/npm/v/deadlock)](https://www.npmjs.com/package/deadlock)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/deadlock)
-![node-current](https://img.shields.io/node/v/deadlock)
--->
+A simpler schedule for the summer game fest, since their website is fucking awful
+
+https://game-fest.haglund.dev
+
+---
+
+Built using Qwik City to try it out, and it's a bit of a mess.
