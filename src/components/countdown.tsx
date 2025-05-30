@@ -1,4 +1,4 @@
-import { component$, useSignal, useVisibleTask$ } from "@builder.io/qwik"
+import { $, component$, useOnDocument, useSignal } from "@builder.io/qwik"
 import {
   addHours,
   formatDistanceToNowStrict,
@@ -19,32 +19,31 @@ type CountdownProps = {
 export const Countdown = component$<CountdownProps>(({ date, upNext }) => {
   const countdownString = useSignal("")
 
-  useVisibleTask$(() => {
-    const interval = setInterval(() => {
-      const now = new Date()
-      const isSameDay = isWithinInterval(date, {
-        start: now,
-        end: addHours(now, 24),
-      })
-      if (upNext || isSameDay) {
-        const duration = intervalToDuration({
+  useOnDocument(
+    "DOMContentLoaded",
+    $(() => {
+      setInterval(() => {
+        const now = new Date()
+        const isSameDay = isWithinInterval(date, {
           start: now,
-          end: date,
+          end: addHours(now, 24),
         })
+        if (upNext || isSameDay) {
+          const duration = intervalToDuration({
+            start: now,
+            end: date,
+          })
 
-        countdownString.value = `in ${formatDuration(duration, { delimiter: ", ", zero: true })}`
-      } else {
-        countdownString.value =
-          date.getTime() < Date.now()
-            ? `${formatToNow(date)} ago`
-            : `in ${formatToNow(date)}`
-      }
-
-      return () => {
-        clearInterval(interval as never)
-      }
-    })
-  })
+          countdownString.value = `in ${formatDuration(duration, { delimiter: ", ", zero: true })}`
+        } else {
+          countdownString.value =
+            date.getTime() < Date.now()
+              ? `${formatToNow(date)} ago`
+              : `in ${formatToNow(date)}`
+        }
+      })
+    }),
+  )
 
   return (
     <FadeIn show={countdownString.value !== ""}>

@@ -1,4 +1,5 @@
 import antfu from "@antfu/eslint-config"
+import { qwikEslint9Plugin } from "eslint-plugin-qwik"
 
 const sortImports = {
   "perfectionist/sort-imports": [
@@ -21,42 +22,45 @@ const sortImports = {
   ],
 }
 
-export default antfu({
-  ignores: ["**/*.json"],
-  markdown: false,
-  stylistic: false,
-  jsonc: false,
-  jsx: false,
-  toml: false,
-  test: { overrides: { "test/no-import-node-test": "off" } },
-  typescript: {
-    tsconfigPath: "tsconfig.json",
-    ignoresTypeAware: ["copy.ts", "*.config.*"],
+export default antfu(
+  {
+    ignores: ["**/*.json"],
+    markdown: false,
+    stylistic: false,
+    jsonc: false,
+    jsx: false,
+    toml: false,
+    test: { overrides: { "test/no-import-node-test": "off" } },
+    typescript: {
+      tsconfigPath: "tsconfig.json",
+      ignoresTypeAware: ["copy.ts", "*.config.*"],
 
-    overridesTypeAware: {
-      "ts/no-floating-promises": [
-        "error",
-        {
-          allowForKnownSafeCalls: [
-            { from: "package", package: "node:test", name: ["describe", "it", "test"] },
-          ],
-        },
-      ],
-    },
+      overridesTypeAware: {
+        "ts/no-floating-promises": [
+          "error",
+          {
+            allowForKnownSafeCalls: [
+              { from: "package", package: "node:test", name: ["describe", "it", "test"] },
+            ],
+          },
+        ],
+      },
 
-    overrides: {
-      "no-console": "off",
-      "antfu/no-top-level-await": "off",
-      "import/consistent-type-specifier-style": "off",
-      "node/prefer-global/process": "off",
-      "ts/consistent-type-definitions": "off",
-      "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
-      "ts/no-unsafe-argument": "off",
-      "ts/no-unsafe-assignment": "off",
-      "ts/no-use-before-define": "off",
-      "unused-imports/no-unused-vars": "off",
+      overrides: {
+        "no-console": "off",
+        "antfu/no-top-level-await": "off",
+        "import/consistent-type-specifier-style": "off",
+        "node/prefer-global/process": "off",
+        "ts/consistent-type-definitions": "off",
+        "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
+        "ts/no-unsafe-argument": "off",
+        "ts/no-unsafe-assignment": "off",
+        "ts/no-use-before-define": "off",
+        "unused-imports/no-unused-vars": "off",
 
-      ...sortImports,
+        ...sortImports,
+      },
     },
   },
-})
+  qwikEslint9Plugin.configs.recommended,
+)
