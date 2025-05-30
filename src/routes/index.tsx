@@ -99,5 +99,8 @@ export const head = {
       content: "A simple schedule for the Summer Game Fest",
     },
   ],
-  links: [{ rel: "me", href: "https://github.com/BeeeQueue" }],
+  links: [
+    { rel: "me", href: "https://github.com/BeeeQueue" },
+    { rel: "preconnect", href: "https://cdn.fontshare.com" },
+  ],
 } satisfies DocumentHead

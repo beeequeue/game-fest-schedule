@@ -28,6 +28,10 @@ const { router, notFound, staticFile } = createQwikCity({
 const server = createServer()
 
 server.on("request", (req, res) => {
+  if (req.url?.startsWith("/build") || req.url?.startsWith("/assets")) {
+    res.setHeader("Cache-Control", "public, max-age=31536000, immutable")
+  }
+
   void staticFile(req, res, () => {
     void router(req, res, () => {
       void notFound(req, res, () => null)
