@@ -4,7 +4,7 @@ type Event = {
   url?: string
 }
 
-export const events = [
+export const eventsSummer2024 = [
   {
     name: "PlayStation State of Play",
     dateTime: new Date("2024-05-31 00:00Z+2"),
@@ -61,4 +61,47 @@ export const events = [
     dateTime: new Date("2024-06-10 21:00Z+2"),
     url: "https://www.youtube.com/watch?v=0QNRXquzTts",
   },
-] satisfies Event[]
+] as Event[]
+
+export const events = [
+  {
+    name: "Summer Game Fest",
+    dateTime: new Date("2025-06-06 14:00Z-7"),
+  },
+  {
+    name: "Day of the Devs",
+    dateTime: new Date("2025-06-06 16:00Z-7"),
+  },
+  {
+    name: "Wholesome Direct",
+    dateTime: new Date("2025-06-07 09:00Z-7"),
+  },
+  {
+    name: "Women-led Games",
+    dateTime: new Date("2025-06-07 10:00Z-7"),
+  },
+  {
+    name: "Latin American Games Showcase",
+    dateTime: new Date("2025-06-07 11:00Z-7"),
+  },
+  {
+    name: "Southeast Asian Games Showcase",
+    dateTime: new Date("2025-06-07 12:00Z-7"),
+  },
+  {
+    name: "Green Games Showcase",
+    dateTime: new Date("2025-06-07 13:00Z-7"),
+  },
+  {
+    name: "Frosty Games Fest",
+    dateTime: new Date("2025-06-07 16:00Z-7"),
+  },
+  {
+    name: "Xbox Games Showcase",
+    dateTime: new Date("2025-06-08 10:00Z-7"),
+  },
+  {
+    name: "PC Gaming Show",
+    dateTime: new Date("2025-06-08 12:00Z-7"),
+  },
+] satisfies Event[] as Event[]
