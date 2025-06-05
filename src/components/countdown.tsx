@@ -28,13 +28,23 @@ export const Countdown = component$<CountdownProps>(({ date, upNext }) => {
           start: now,
           end: addHours(now, 24),
         })
+        const isInNextHour = isWithinInterval(date, {
+          start: now,
+          end: addHours(now, 2),
+        })
         if (upNext || isSameDay) {
           const duration = intervalToDuration({
             start: now,
             end: date,
           })
 
-          countdownString.value = `in ${formatDuration(duration, { delimiter: ", ", zero: true })}`
+          countdownString.value = `in ${formatDuration(duration, {
+            delimiter: ", ",
+            format: !isInNextHour
+              ? ["weeks", "days", "hours"]
+              : ["weeks", "days", "hours", "minutes", "seconds"],
+            zero: true,
+          })}`
         } else {
           countdownString.value =
             date.getTime() < Date.now()
