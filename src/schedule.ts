@@ -65,43 +65,63 @@ export const eventsSummer2024 = [
 
 export const events = [
   {
+    name: "State of Unreal 2025",
+    dateTime: new Date("2025-06-03 20:00Z+2"), // wrong time
+    url: "https://www.youtube.com/watch?v=-XkhD4gNeQg",
+  },
+  {
+    name: "PlayStation State of Play 2025",
+    dateTime: new Date("2025-06-04 23:00Z+2"),
+    url: "https://www.youtube.com/watch?v=1bYaEtALe00",
+  },
+  {
     name: "Summer Game Fest",
     dateTime: new Date("2025-06-06 14:00Z-7"),
+    url: "https://www.youtube.com/watch?v=-Hr6Q2hln_M",
   },
   {
     name: "Day of the Devs",
     dateTime: new Date("2025-06-06 16:00Z-7"),
+    url: "https://www.youtube.com/watch?v=oEm6wAdqfEY",
   },
   {
     name: "Wholesome Direct",
     dateTime: new Date("2025-06-07 09:00Z-7"),
+    url: "https://www.youtube.com/watch?v=D4ZRXGcmDlM",
   },
   {
     name: "Women-led Games",
     dateTime: new Date("2025-06-07 10:00Z-7"),
+    url: "https://www.youtube.com/watch?v=QvjEUilTbrc",
   },
   {
     name: "Latin American Games Showcase",
     dateTime: new Date("2025-06-07 11:00Z-7"),
+    url: "https://www.youtube.com/watch?v=80xGaa_g-Zo",
   },
   {
     name: "Southeast Asian Games Showcase",
     dateTime: new Date("2025-06-07 12:00Z-7"),
+    url: "https://www.youtube.com/watch?v=y7ZaDJgukk8",
   },
   {
     name: "Green Games Showcase",
     dateTime: new Date("2025-06-07 13:00Z-7"),
+    url: "https://www.youtube.com/watch?v=AnywlhGzfL4",
   },
   {
     name: "Frosty Games Fest",
     dateTime: new Date("2025-06-07 16:00Z-7"),
+    url: "https://www.youtube.com/watch?v=11JJtI7FRNk",
   },
   {
     name: "Xbox Games Showcase",
-    dateTime: new Date("2025-06-08 10:00Z-7"),
+    dateTime: new Date("2025-06-08 20:00Z+2"),
+    url: "https://www.youtube.com/watch?v=oPa7KaQXp8g",
   },
   {
     name: "PC Gaming Show",
     dateTime: new Date("2025-06-08 12:00Z-7"),
+    url: "https://www.youtube.com/watch?v=YXC7hf6PBTE",
   },
 ] satisfies Event[] as Event[]

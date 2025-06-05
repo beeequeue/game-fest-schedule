@@ -21,7 +21,9 @@ export default component$(() => {
     )
   }
 
-  const upNextIndex = events.findIndex(({ dateTime }) => Date.now() < dateTime.getTime())
+  const upNextIndex = events
+    .toSorted((a, b) => a.dateTime.getTime() - b.dateTime.getTime())
+    .findIndex(({ dateTime }) => Date.now() < dateTime.getTime())
 
   return (
     <>
