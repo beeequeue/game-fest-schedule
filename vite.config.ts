@@ -5,8 +5,6 @@ import { defineConfig } from "vite"
 
 import pkgJson from "./package.json" with { type: "json" }
 
-console.log()
-
 /**
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
@@ -31,8 +29,7 @@ export default defineConfig(({ command, mode }) => ({
     exclude: [],
   },
 
-  experimental: { enableNativePlugin: true },
-  build: { target: ["firefox122", "chrome122", "safari15"] },
+  build: { target: ["firefox125", "chrome125", "safari15"] },
   oxc: {
     jsx: {
       runtime: "automatic",
