@@ -2,6 +2,7 @@ import { qwikCity } from "@builder.io/qwik-city/vite"
 import { qwikVite } from "@builder.io/qwik/optimizer"
 import UnoCss from "@unocss/vite"
 import { defineConfig } from "vite"
+import Oxc from "unplugin-oxc/vite"
 
 import pkgJson from "./package.json" with { type: "json" }
 
@@ -9,32 +10,20 @@ import pkgJson from "./package.json" with { type: "json" }
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
 export default defineConfig(({ command, mode }) => ({
-  plugins: [
-    qwikCity(),
-    qwikVite({ lint: false }),
-    UnoCss(),
-    {
-      name: "fix",
-      enforce: "post",
-      config: (config) => {
-        config.esbuild = false
-
-        return config
-      },
-    },
-  ],
+  plugins: [qwikCity(), qwikVite({ lint: false }), UnoCss(), Oxc({ minify: true })],
   optimizeDeps: {
     // Put problematic deps that break bundling here, mostly those with binaries.
     // For example ['better-sqlite3'] if you use that in server functions.
     exclude: [],
   },
 
-  build: { target: ["firefox125", "chrome125", "safari15"] },
-  oxc: {
-    jsx: {
-      runtime: "automatic",
-      importSource: "@builder.io/qwik",
-    },
+  build: {
+    target: ["firefox125", "chrome125", "safari15"],
+    minify: false,
+  },
+  esbuild: {
+    jsxImportSource: "@builder.io/qwik",
+    jsx: "automatic",
   },
 
   /**
