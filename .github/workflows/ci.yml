@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - run: pnpm lint
+      - run: node --run lint
 
   typecheck:
     runs-on: ubuntu-latest
@@ -61,7 +61,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - run: pnpm typecheck
+      - run: node --run typecheck
 
   build:
     needs: [lint, typecheck]
@@ -72,29 +72,26 @@ jobs:
       id-token: write
 
     steps:
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@902fa8ec7d6ecbf8d84d538b9b233a880e428804 # v5
-        with:
-          images: |
-            ghcr.io/${{ github.repository }}
-          tags: |
-            type=raw,value={{sha}}
-            type=raw,value=latest
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
-      - name: Login to GHCR
-        if: github.ref == 'refs/heads/main'
-        uses: docker/login-action@74a5d142397b4f367a81961eba4e8cd7edddf772 # v3
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          node-version: 24
 
-      - name: Build and maybe Push Docker image
-        uses: docker/build-push-action@263435318d21b8e681c14492fe198d362a7d2c83 # v6
+      - run: corepack enable
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4
         with:
-          push: ${{ github.ref == 'refs/heads/main' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
-          #cache-from: type=gha
-          #cache-to: type=gha,mode=max
+          path: ${{ steps.cache.outputs.path }}
+          key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - run: node --run build
