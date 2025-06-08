@@ -64,7 +64,6 @@ jobs:
       - run: node --run typecheck
 
   build:
-    needs: [lint, typecheck]
     runs-on: ubuntu-latest
     permissions:
       contents: read
