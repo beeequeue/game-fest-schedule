@@ -116,12 +116,12 @@ export const events = [
   },
   {
     name: "Xbox Games Showcase",
-    dateTime: new Date("2025-06-08 20:00Z+2"),
+    dateTime: new Date("2025-06-08 19:00Z+2"),
     url: "https://www.youtube.com/watch?v=oPa7KaQXp8g",
   },
   {
     name: "PC Gaming Show",
-    dateTime: new Date("2025-06-08 12:00Z-7"),
+    dateTime: new Date("2025-06-08 20:30Z+2"),
     url: "https://www.youtube.com/watch?v=YXC7hf6PBTE",
   },
 ] satisfies Event[] as Event[]
