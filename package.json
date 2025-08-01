@@ -52,7 +52,7 @@
     "prettier-plugin-tailwindcss": "0.6.13",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.8.3",
-    "unplugin-oxc": "0.4.6",
+    "unplugin-oxc": "0.4.8",
     "vite": "7.0.0"
   }
 }
