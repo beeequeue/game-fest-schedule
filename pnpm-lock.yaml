@@ -30,10 +30,10 @@ importers:
         version: 5.0.0(eslint@9.32.0(jiti@2.4.2))(typescript@5.9.2)(vitest@2.1.2(@types/node@22.15.34)(lightningcss@1.30.1))
       '@builder.io/qwik':
         specifier: 1.14.1
-        version: 1.14.1(vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))
+        version: 1.14.1(vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))
       '@builder.io/qwik-city':
         specifier: 1.14.1
-        version: 1.14.1(acorn@8.15.0)(rollup@4.41.1)(typescript@5.9.2)(vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))
+        version: 1.14.1(acorn@8.15.0)(rollup@4.41.1)(typescript@5.9.2)(vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))
       '@iconify-json/simple-icons':
         specifier: 1.2.41
         version: 1.2.41
@@ -63,7 +63,7 @@ importers:
         version: 66.3.2
       '@unocss/vite':
         specifier: 66.3.2
-        version: 66.3.2(vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))(vue@3.5.12(typescript@5.9.2))
+        version: 66.3.2(vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))(vue@3.5.12(typescript@5.9.2))
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
@@ -92,8 +92,8 @@ importers:
         specifier: 0.4.8
         version: 0.4.8
       vite:
-        specifier: 7.0.0
-        version: 7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
+        specifier: 7.0.7
+        version: 7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
 
 packages:
 
@@ -2455,6 +2455,10 @@ packages:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
 
+  picomatch@4.0.3:
+    resolution: {integrity: sha512-5gTmgEY/sqK6gFXLIsQNH19lWb4ebPDLA4SdLP7dsWkIXHWlG66oPuVvXSGFPppYZz8ZDZq0dYYrbHfBCVUb1Q==}
+    engines: {node: '>=12'}
+
   pkg-types@1.3.1:
     resolution: {integrity: sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ==}
 
@@ -2888,8 +2892,8 @@ packages:
       terser:
         optional: true
 
-  vite@7.0.0:
-    resolution: {integrity: sha512-ixXJB1YRgDIw2OszKQS9WxGHKwLdCsbQNkpJN171udl6szi/rIySHL6/Os3s2+oE4P/FLD4dxg4mD7Wust+u5g==}
+  vite@7.0.7:
+    resolution: {integrity: sha512-hc6LujN/EkJHmxeiDJMs0qBontZ1cdBvvoCbWhVjzUFTU329VRyOC46gHNSA8NcOC5yzCeXpwI40tieI3DEZqg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
@@ -3071,7 +3075,7 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@builder.io/qwik-city@1.14.1(acorn@8.15.0)(rollup@4.41.1)(typescript@5.9.2)(vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))':
+  '@builder.io/qwik-city@1.14.1(acorn@8.15.0)(rollup@4.41.1)(typescript@5.9.2)(vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))':
     dependencies:
       '@mdx-js/mdx': 3.1.0(acorn@8.15.0)
       '@types/mdx': 2.0.13
@@ -3080,7 +3084,7 @@ snapshots:
       undici: 7.10.0
       valibot: 1.1.0(typescript@5.9.2)
       vfile: 6.0.2
-      vite: 7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
+      vite: 7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
       vite-imagetools: 7.1.0(rollup@4.41.1)
       zod: 3.22.4
     transitivePeerDependencies:
@@ -3089,11 +3093,11 @@ snapshots:
       - supports-color
       - typescript
 
-  '@builder.io/qwik@1.14.1(vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))':
+  '@builder.io/qwik@1.14.1(vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))':
     dependencies:
       csstype: 3.1.3
       rollup: 4.41.1
-      vite: 7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
+      vite: 7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
 
   '@clack/core@0.5.0':
     dependencies:
@@ -4022,7 +4026,7 @@ snapshots:
       '@unocss/rule-utils': 66.3.2
       css-tree: 3.1.0
 
-  '@unocss/vite@66.3.2(vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))(vue@3.5.12(typescript@5.9.2))':
+  '@unocss/vite@66.3.2(vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))(vue@3.5.12(typescript@5.9.2))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@unocss/config': 66.3.2
@@ -4033,7 +4037,7 @@ snapshots:
       pathe: 2.0.3
       tinyglobby: 0.2.14
       unplugin-utils: 0.2.4
-      vite: 7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
+      vite: 7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0)
     transitivePeerDependencies:
       - vue
 
@@ -4761,9 +4765,9 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.2
 
-  fdir@6.4.6(picomatch@4.0.2):
+  fdir@6.4.6(picomatch@4.0.3):
     optionalDependencies:
-      picomatch: 4.0.2
+      picomatch: 4.0.3
 
   file-entry-cache@8.0.0:
     dependencies:
@@ -5506,6 +5510,8 @@ snapshots:
 
   picomatch@4.0.2: {}
 
+  picomatch@4.0.3: {}
+
   pkg-types@1.3.1:
     dependencies:
       confbox: 0.1.8
@@ -5959,11 +5965,11 @@ snapshots:
       lightningcss: 1.30.1
     optional: true
 
-  vite@7.0.0(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0):
+  vite@7.0.7(@types/node@22.15.34)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0):
     dependencies:
       esbuild: 0.25.5
-      fdir: 6.4.6(picomatch@4.0.2)
-      picomatch: 4.0.2
+      fdir: 6.4.6(picomatch@4.0.3)
+      picomatch: 4.0.3
       postcss: 8.5.6
       rollup: 4.41.1
       tinyglobby: 0.2.14
