@@ -53,6 +53,6 @@
     "simple-git-hooks": "2.13.1",
     "typescript": "5.9.2",
     "unplugin-oxc": "0.4.8",
-    "vite": "7.0.7"
+    "vite": "7.0.8"
   }
 }
