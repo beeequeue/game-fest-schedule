@@ -1,6 +1,6 @@
 import { $, component$, useOnDocument, useSignal } from "@builder.io/qwik"
 
-import { FadeIn } from "./fade-in"
+import { FadeIn } from "./fade-in.tsx"
 
 export const Timezone = component$(() => {
   const tzString = useSignal("")

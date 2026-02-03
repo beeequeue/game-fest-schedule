@@ -7,7 +7,7 @@ import {
   isWithinInterval,
 } from "date-fns"
 
-import { FadeIn } from "./fade-in"
+import { FadeIn } from "./fade-in.tsx"
 
 const formatToNow = (date: Date) => formatDistanceToNowStrict(date)
 

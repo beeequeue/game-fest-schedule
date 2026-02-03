@@ -2,9 +2,9 @@ import { component$ } from "@builder.io/qwik"
 import type { DocumentHead } from "@builder.io/qwik-city"
 import { format } from "date-fns"
 
-import { Countdown } from "../components/countdown"
-import { Timezone } from "../components/timezone"
-import { events } from "../schedule"
+import { Countdown } from "../components/countdown.tsx"
+import { Timezone } from "../components/timezone.tsx"
+import { events } from "../schedule.ts"
 
 const formatDate = (date: Date) => format(date, "yyyy-MM-dd HH:mm")
 const formatDayMonth = (date: Date) => format(date, "MMMM do")

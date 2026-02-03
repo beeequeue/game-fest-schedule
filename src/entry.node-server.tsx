@@ -13,7 +13,7 @@ import { createQwikCity } from "@builder.io/qwik-city/middleware/node"
 import qwikCityPlan from "@qwik-city-plan"
 import { manifest } from "@qwik-client-manifest"
 
-import render from "./entry.ssr"
+import render from "./entry.ssr.tsx"
 
 // Allow for dynamic port
 const PORT = process.env.PORT ?? 3004

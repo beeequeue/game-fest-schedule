@@ -3,11 +3,9 @@ import {
   QwikCityProvider,
   type RequestHandler,
   RouterOutlet,
-  ServiceWorkerRegister,
 } from "@builder.io/qwik-city"
-import { isDev } from "@builder.io/qwik/build"
 
-import { RouterHead } from "./components/router-head"
+import { RouterHead } from "./components/router-head.tsx"
 
 import "@unocss/reset/sanitize/assets.css"
 import "@unocss/reset/sanitize/forms.css"
@@ -43,8 +41,6 @@ export default component$(() => {
 
       <body lang="en">
         <RouterOutlet />
-
-        {!isDev && <ServiceWorkerRegister />}
       </body>
     </QwikCityProvider>
   )
