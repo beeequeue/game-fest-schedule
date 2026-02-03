@@ -68,7 +68,7 @@ export default component$(() => {
             ]}
           >
             {shouldShowSeparator(index) && (
-              <divsum class="md:left-25% absolute left-5 top-1 text-gray-400">
+              <divsum class="md:left-25% absolute top-1 left-5 text-gray-400">
                 {formatDayMonth(event.dateTime)}
               </divsum>
             )}
@@ -87,7 +87,7 @@ export default component$(() => {
                 <h1 class="m-0 mb-2 text-center">{event.name}</h1>
               )}
 
-              <div class="w-130 lt-sm:flex-col lt-sm:text-center flex max-w-full justify-between text-gray-300">
+              <div class="lt-sm:flex-col lt-sm:text-center flex w-130 max-w-full justify-between text-gray-300">
                 <div>{formatDate(event.dateTime)}</div>
 
                 {upNextIndex <= index && (
