@@ -33,7 +33,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "5.0.0",
     "@builder.io/qwik": "1.14.1",
-    "@builder.io/qwik-city": "1.14.1",
+    "@builder.io/qwik-city": "1.19.0",
     "@iconify-json/simple-icons": "1.2.41",
     "@tsconfig/node24": "24.0.1",
     "@tsconfig/strictest": "2.0.5",
