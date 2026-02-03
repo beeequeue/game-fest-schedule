@@ -76,8 +76,8 @@ importers:
         specifier: 10.0.0-rc.2
         version: 10.0.0-rc.2(jiti@2.6.1)
       eslint-plugin-qwik:
-        specifier: 2.0.0-beta.19
-        version: 2.0.0-beta.19(eslint@10.0.0-rc.2(jiti@2.6.1))(typescript@5.9.3)
+        specifier: 1.19.0
+        version: 1.19.0(eslint@10.0.0-rc.2(jiti@2.6.1))(typescript@5.9.3)
       nano-staged:
         specifier: 0.9.0
         version: 0.9.0
@@ -1411,9 +1411,9 @@ packages:
     peerDependencies:
       eslint: ^9.0.0
 
-  eslint-plugin-qwik@2.0.0-beta.19:
-    resolution: {integrity: sha512-4ddHHKfoI9Xx8BAb+C+Gt34WOFxuGkVdzf37amDWziE2wC5K240tGopVd3PjT7J3FBXraFZmseKIOBu2vxaCAQ==}
-    engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
+  eslint-plugin-qwik@1.19.0:
+    resolution: {integrity: sha512-xZQxlUsDgX1V+z+DVqD0YicN83k3SpJul4ArCSjuz7uJ6P2IXno7iSKSupuFzQuqRMwDtkSB4uR9mY+3sd0E3w==}
+    engines: {node: '>=16.8.0 <18.0.0 || >=18.11'}
     peerDependencies:
       eslint: ^8.57.0 || ^9.0.0
 
@@ -3710,7 +3710,7 @@ snapshots:
       yaml: 2.8.2
       yaml-eslint-parser: 2.0.0
 
-  eslint-plugin-qwik@2.0.0-beta.19(eslint@10.0.0-rc.2(jiti@2.6.1))(typescript@5.9.3):
+  eslint-plugin-qwik@1.19.0(eslint@10.0.0-rc.2(jiti@2.6.1))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.54.0(eslint@10.0.0-rc.2(jiti@2.6.1))(typescript@5.9.3)
       eslint: 10.0.0-rc.2(jiti@2.6.1)
