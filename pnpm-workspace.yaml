@@ -15,9 +15,16 @@ overrides:
   is-core-module: npm:@nolyfill/is-core-module@^1
   object.assign: npm:@nolyfill/object.assign@^1
   object.values: npm:@nolyfill/object.values@^1
-  vite: 8.0.0-beta.12
+  vite: 8.0.16
 
-enableGlobalVirtualStore: false
+allowBuilds:
+  esbuild: false
+  sharp: false
+  simple-git-hooks: false
+
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - vite@8.0.16
+
 savePrefix: ""
 shellEmulator: true
-minimumReleaseAge: 0
