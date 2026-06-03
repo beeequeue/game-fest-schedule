@@ -12,7 +12,7 @@ const formatDayMonth = (date: Date) => format(date, "MMMM do")
 export default component$(() => {
   const shouldShowSeparator = (index: number) => {
     const previous = events[index - 1]?.dateTime
-    const current = events[index].dateTime
+    const current = events[index]!.dateTime
 
     return (
       previous != null &&
