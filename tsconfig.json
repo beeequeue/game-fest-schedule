@@ -4,7 +4,6 @@
     // Output
     "noEmit": true,
     "sourceMap": true,
-    "incremental": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@builder.io/qwik",
 
@@ -20,7 +19,7 @@
     "exactOptionalPropertyTypes": false,
 
     // Extra types
-    "lib": ["dom"],
+    "lib": ["dom", "es2025", "esnext.temporal"],
     "types": ["node", "vite/client"]
   },
 

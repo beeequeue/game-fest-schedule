@@ -53,4 +53,9 @@ export default antfu(
     },
   },
   qwikEslint9Plugin.configs.recommended,
-) as never
+  {
+    rules: {
+      "qwik/valid-lexical-scope": "off",
+    },
+  },
+)

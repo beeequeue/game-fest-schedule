@@ -9,7 +9,6 @@ import pkgJson from "./package.json" with { type: "json" }
  * Note that Vite normally starts from `index.html` but the qwikCity plugin makes start at `src/entry.ssr.tsx` instead.
  */
 export default defineConfig(({ command, mode }) => ({
-  experimental: { enableNativePlugin: true },
   plugins: [qwikCity(), qwikVite({ lint: false }), UnoCss()],
   optimizeDeps: {
     // Put problematic deps that break bundling here, mostly those with binaries.
@@ -17,9 +16,6 @@ export default defineConfig(({ command, mode }) => ({
     exclude: [],
   },
 
-  build: {
-    target: ["firefox125", "chrome125", "safari15"],
-  },
   oxc: {
     jsx: {
       runtime: "automatic",
