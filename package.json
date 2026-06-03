@@ -44,7 +44,7 @@
     "@unocss/reset": "66.7.0",
     "@unocss/transformer-directives": "66.7.0",
     "@unocss/vite": "66.7.0",
-    "date-fns": "4.4.0",
+    "date-fns": "5.0.0-alpha.0",
     "eslint": "10.4.1",
     "eslint-plugin-qwik": "2.0.0-beta.35",
     "nano-staged": "1.0.2",
