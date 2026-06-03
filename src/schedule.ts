@@ -129,43 +129,43 @@ export const eventsSummer2025 = [
 export const events = [
   {
     name: "Six One Indie Showcase",
-    dateTime: new Date("2026-05-21 09:00Z-7"), // from original article; not in cross-checked schedules
+    dateTime: new Date("2026-05-21 09:00Z-7"),
   },
   {
     name: "Warhammer Skulls Showcase",
-    dateTime: new Date("2026-05-21 09:00Z-7"), // from original article; not in cross-checked schedules
+    dateTime: new Date("2026-05-21 09:00Z-7"),
   },
   {
     name: "Dragon Quest Day Livestream",
-    dateTime: new Date("2026-05-27 06:00Z-7"), // from original article
+    dateTime: new Date("2026-05-27 06:00Z-7"),
   },
   {
     name: "AG French Direct",
-    dateTime: new Date("2026-05-27 09:00Z-7"), // from original article
+    dateTime: new Date("2026-05-27 09:00Z-7"),
   },
   {
     name: "Thinky Direct",
-    dateTime: new Date("2026-05-28 10:00Z-7"), // from original article
+    dateTime: new Date("2026-05-28 10:00Z-7"),
   },
   {
     name: "Insider Gaming Showcase",
-    dateTime: new Date("2026-05-28 12:00Z-7"), // from original article
+    dateTime: new Date("2026-05-28 12:00Z-7"),
   },
   {
     name: "Indie Quest",
-    dateTime: new Date("2026-05-28 17:00Z-7"), // from original article
+    dateTime: new Date("2026-05-28 17:00Z-7"),
   },
   {
     name: "The MIX Summer Game Online Showcase",
-    dateTime: new Date("2026-06-01 09:00Z-7"), // 9am PT confirmed
+    dateTime: new Date("2026-06-01 09:00Z-7"),
   },
   {
     name: "Midsummer Nights Scream",
-    dateTime: new Date("2026-06-01 11:00Z-7"), // from original article
+    dateTime: new Date("2026-06-01 11:00Z-7"),
   },
   {
     name: "Best Indie Games Summer Showcase",
-    dateTime: new Date("2026-06-02 08:00Z-7"), // from original article
+    dateTime: new Date("2026-06-02 08:00Z-7"),
   },
   {
     name: "Black Voices in Gaming",
@@ -178,7 +178,7 @@ export const events = [
   },
   {
     name: "Shacknews E4 Indie Showcase",
-    dateTime: new Date("2026-06-03 14:30Z-7"), // from original article
+    dateTime: new Date("2026-06-03 14:30Z-7"),
   },
   {
     name: "Latin American Games Showcase",
@@ -218,49 +218,49 @@ export const events = [
   },
   {
     name: "Story-Rich Showcase",
-    dateTime: new Date("2026-06-06 10:00Z-7"), // 10am PT confirmed
+    dateTime: new Date("2026-06-06 10:00Z-7"),
   },
   {
     name: "Green Games Showcase",
-    dateTime: new Date("2026-06-06 11:00Z-7"), // 11am PT confirmed (YouTube only)
+    dateTime: new Date("2026-06-06 11:00Z-7"),
   },
   {
     name: "Future Games Show Summer Showcase",
-    dateTime: new Date("2026-06-06 12:00Z-7"), // 12pm PT confirmed
+    dateTime: new Date("2026-06-06 12:00Z-7"),
   },
   {
     name: "Gayming Pride Parade",
-    dateTime: new Date("2026-06-06 12:00Z-7"), // 12pm PT confirmed
+    dateTime: new Date("2026-06-06 12:00Z-7"),
   },
   {
     name: "Frosty Games Fest",
-    dateTime: new Date("2026-06-06 15:00Z-7"), // 3pm PT confirmed
+    dateTime: new Date("2026-06-06 15:00Z-7"),
   },
   {
     name: "IGN Live Day 2",
-    dateTime: new Date("2026-06-07 00:00Z-7"), // June 7 confirmed; exact time not listed
+    dateTime: new Date("2026-06-07 00:00Z-7"),
     url: "https://www.youtube.com/@IGN",
   },
   {
     name: "Xbox Games Showcase + Gears of War: E-Day Direct",
-    dateTime: new Date("2026-06-07 10:00Z-7"), // 10am PT / 1pm ET confirmed
+    dateTime: new Date("2026-06-07 10:00Z-7"),
     url: "https://www.youtube.com/@xbox",
   },
   {
     name: "PC Gaming Show",
-    dateTime: new Date("2026-06-07 12:00Z-7"), // 12pm PT confirmed
+    dateTime: new Date("2026-06-07 12:00Z-7"),
     url: "https://www.youtube.com/@PCGamer",
   },
   {
     name: "Deutsche Indie Showcase",
-    dateTime: new Date("2026-06-07 14:00Z-7"), // 2pm PT confirmed (YouTube only)
+    dateTime: new Date("2026-06-07 14:00Z-7"),
   },
   {
     name: "India Games Showcase",
-    dateTime: new Date("2026-06-08 10:00Z-7"), // 10am PT confirmed
+    dateTime: new Date("2026-06-08 10:00Z-7"),
   },
   {
     name: "The UploadVR Showcase",
-    dateTime: new Date("2026-06-12 10:00Z-7"), // from original article
+    dateTime: new Date("2026-06-12 10:00Z-7"),
   },
 ] satisfies Event[] as Event[]
