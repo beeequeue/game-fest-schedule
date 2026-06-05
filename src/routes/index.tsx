@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik"
+import { $, component$, useOnDocument } from "@builder.io/qwik"
 import type { DocumentHead } from "@builder.io/qwik-city"
 import { format } from "date-fns"
 
@@ -24,6 +24,14 @@ export default component$(() => {
   const upNextIndex = events
     .toSorted((a, b) => a.dateTime.getTime() - b.dateTime.getTime())
     .findIndex(({ dateTime }) => Date.now() < dateTime.getTime())
+
+  useOnDocument(
+    "DOMContentLoaded",
+    $(() => {
+      const upNextElement = document.getElementById(`event-${upNextIndex + 1}`)
+      upNextElement?.scrollIntoView({ behavior: "smooth", block: "center" })
+    }),
+  )
 
   return (
     <>
@@ -54,6 +62,7 @@ export default component$(() => {
         {events.map((event, index) => (
           <div
             key={event.name}
+            id={`event-${index + 1}`}
             class={[
               "relative",
               "flex",
