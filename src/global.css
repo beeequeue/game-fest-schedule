@@ -35,6 +35,36 @@ h1 {
   line-height: 32px;
 }
 
+a {
+  color: #eee;
+}
+
 .separator {
   --at-apply: b-0 b-t-2 b-solid b-gray-500;
+}
+
+.rainbow-gradient {
+  background-image: linear-gradient(
+    to left,
+    oklch(0.618 0.218 26.388),
+    oklch(0.503 0.247 263.028),
+    oklch(0.778 0.243 141.451),
+    oklch(0.618 0.218 26.388)
+  );
+  background-size: 200% 100%;
+  background-repeat: repeat; /* the key fix */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent !important;
+  animation: rainbow-slide 5s linear infinite;
+}
+
+@keyframes rainbow-slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 200% 0;
+  }
+  /* one full tile = seamless loop */
 }

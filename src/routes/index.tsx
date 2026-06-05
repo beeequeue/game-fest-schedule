@@ -88,12 +88,22 @@ export default component$(() => {
                   href={event.url}
                   target="_blank"
                   rel="noopener"
-                  class="block w-full text-center text-white"
+                  class={[
+                    "decoration-none block w-full text-center",
+                    { "rainbow-gradient": index === upNextIndex },
+                  ]}
                 >
                   <h1 class="m-0 mb-2 text-center">{event.name}</h1>
                 </a>
               ) : (
-                <h1 class="m-0 mb-2 text-center">{event.name}</h1>
+                <h1
+                  class={[
+                    "m-0 mb-2 text-center",
+                    { "rainbow-gradient": index === upNextIndex },
+                  ]}
+                >
+                  {event.name}
+                </h1>
               )}
 
               <div class="lt-sm:flex-col lt-sm:text-center flex w-130 max-w-full justify-between text-gray-300">
