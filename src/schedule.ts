@@ -207,11 +207,6 @@ export const events = [
     dateTime: new Date("2026-06-06 08:00Z-7"), // see caveat: 8am vs 8pm PT disagreement
   },
   {
-    name: "IGN Live Day 1",
-    dateTime: new Date("2026-06-06 00:00Z-7"), // June 6 confirmed; exact time not listed
-    url: "https://www.youtube.com/@IGN",
-  },
-  {
     name: "Wholesome Direct",
     dateTime: new Date("2026-06-06 09:00Z-7"), // 9am PT / 12pm ET confirmed
     url: "https://www.youtube.com/@WholesomeGames",
@@ -237,12 +232,7 @@ export const events = [
     dateTime: new Date("2026-06-06 15:00Z-7"),
   },
   {
-    name: "IGN Live Day 2",
-    dateTime: new Date("2026-06-07 00:00Z-7"),
-    url: "https://www.youtube.com/@IGN",
-  },
-  {
-    name: "Xbox Games Showcase + Gears of War: E-Day Direct",
+    name: "Xbox Games Showcase",
     dateTime: new Date("2026-06-07 10:00Z-7"),
     url: "https://www.youtube.com/@xbox",
   },
@@ -264,3 +254,5 @@ export const events = [
     dateTime: new Date("2026-06-12 10:00Z-7"),
   },
 ] satisfies Event[] as Event[]
+
+events.sort((a, b) => a.dateTime.getTime() - b.dateTime.getTime())
