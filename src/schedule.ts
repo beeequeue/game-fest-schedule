@@ -169,12 +169,12 @@ export const events = [
   },
   {
     name: "Black Voices in Gaming",
-    dateTime: new Date("2026-06-02 12:00Z-7"), // 12pm PT confirmed
+    dateTime: new Date("2026-06-02 12:00Z-7"),
   },
   {
     name: "PlayStation State of Play",
-    dateTime: new Date("2026-06-02 14:00Z-7"), // 2pm PT confirmed
-    url: "https://www.youtube.com/playstation",
+    dateTime: new Date("2026-06-02 14:00Z-7"),
+    url: "https://www.youtube.com/watch?v=cvh0xXmu0bs",
   },
   {
     name: "Shacknews E4 Indie Showcase",
@@ -182,34 +182,34 @@ export const events = [
   },
   {
     name: "Latin American Games Showcase",
-    dateTime: new Date("2026-06-04 14:00Z-7"), // 2pm PT confirmed
+    dateTime: new Date("2026-06-04 14:00Z-7"),
   },
   {
     name: "Women-Led Games Showcase",
-    dateTime: new Date("2026-06-04 16:00Z-7"), // 4pm PT confirmed
+    dateTime: new Date("2026-06-04 16:00Z-7"),
   },
   {
     name: "Access-Ability Summer Showcase",
-    dateTime: new Date("2026-06-05 08:00Z-7"), // 8am PT confirmed
+    dateTime: new Date("2026-06-05 08:00Z-7"),
   },
   {
     name: "Summer Game Fest",
-    dateTime: new Date("2026-06-05 14:00Z-7"), // 2pm PT / 5pm ET confirmed
-    url: "https://www.youtube.com/@thegameawards",
+    dateTime: new Date("2026-06-05 14:00Z-7"),
+    url: "https://www.youtube.com/watch?v=QdNmVWXuYec",
   },
   {
     name: "Day of the Devs",
-    dateTime: new Date("2026-06-05 16:00Z-7"), // 4pm PT, immediately after SGF
-    url: "https://www.youtube.com/@DayoftheDevs",
+    dateTime: new Date("2026-06-05 16:00Z-7"),
+    url: "https://www.youtube.com/watch?v=eJJ58aEy1-k",
   },
   {
     name: "Southeast Asian Games Showcase",
-    dateTime: new Date("2026-06-06 08:00Z-7"), // see caveat: 8am vs 8pm PT disagreement
+    dateTime: new Date("2026-06-06 08:00Z-7"),
   },
   {
     name: "Wholesome Direct",
-    dateTime: new Date("2026-06-06 09:00Z-7"), // 9am PT / 12pm ET confirmed
-    url: "https://www.youtube.com/@WholesomeGames",
+    dateTime: new Date("2026-06-06 09:00Z-7"),
+    url: "https://www.youtube.com/watch?v=SZ-TixImWWs",
   },
   {
     name: "Story-Rich Showcase",
@@ -222,6 +222,7 @@ export const events = [
   {
     name: "Future Games Show Summer Showcase",
     dateTime: new Date("2026-06-06 12:00Z-7"),
+    url: "https://www.youtube.com/watch?v=hM2Ofso_w0c",
   },
   {
     name: "Gayming Pride Parade",
@@ -234,12 +235,12 @@ export const events = [
   {
     name: "Xbox Games Showcase",
     dateTime: new Date("2026-06-07 10:00Z-7"),
-    url: "https://www.youtube.com/@xbox",
+    url: "https://www.youtube.com/watch?v=RinXA_k9f4s",
   },
   {
     name: "PC Gaming Show",
     dateTime: new Date("2026-06-07 12:00Z-7"),
-    url: "https://www.youtube.com/@PCGamer",
+    url: "https://www.youtube.com/watch?v=zWX1sorWswc",
   },
   {
     name: "Deutsche Indie Showcase",
