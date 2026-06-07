@@ -1,5 +1,6 @@
 <script lang="ts">
   import { format } from "date-fns"
+  import { onMount } from "svelte"
 
   import Countdown from "../components/countdown.svelte"
   import Timezone from "../components/timezone.svelte"
@@ -41,6 +42,11 @@
 
     upNextIndex = findUpNext()
   }, 1000)
+
+  onMount(() => {
+    if (upNextIndex === -1) return
+    document.getElementById(`event-${upNextIndex}`)?.scrollIntoView({ behavior: "smooth", inline: "center" })
+  })
 </script>
 
 <svelte:head>
