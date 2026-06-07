@@ -48,26 +48,28 @@
   <meta name="description" content="A simpler, better schedule for Summer Game Fest 2026" />
 </svelte:head>
 
-<div class="relative flex w-full items-center justify-center py-5">
+<!-- what the fuck? why is this element shoved to the left???? -->
+<div class="pl-11 flex items-center justify-between gap-2 py-5">
+  <a
+    href="https://github.com/BeeeQueue/game-fest-schedule"
+    rel="noopener"
+    target="_blank"
+    class="flex items-center gap-1.5 py-2 text-white"
+  >
+    <div class="i-simple-icons:github size-1.25em"></div>
+    Source
+  </a>
+
   <Timezone />
 
   <a
     href="https://bsky.app/profile/haglund.dev"
     rel="noopener"
     target="_blank"
-    class="absolute right-5 flex items-center py-2 pl-2 text-white"
+    class="flex items-center gap-1.5 py-2 text-white"
   >
     beequeue
-    <div class="i-simple-icons:bluesky w-1.25em h-1.25em ml-1.5"></div>
-  </a>
-  <a
-    href="https://github.com/BeeeQueue/game-fest-schedule"
-    rel="noopener"
-    target="_blank"
-    class="absolute left-5 flex items-center py-2 pr-2 text-white"
-  >
-    <div class="i-simple-icons:github w-1.25em h-1.25em mr-1.5"></div>
-    Source
+    <div class="i-simple-icons:bluesky size-1.25em"></div>
   </a>
 </div>
 
