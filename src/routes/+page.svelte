@@ -60,24 +60,27 @@
       class:pt-8={shouldShowSeparator(index)}
     >
       {#if shouldShowSeparator(index)}
-        <div class="md:left-25% absolute top-1 left-5 text-gray-400">
+        <div class="absolute top-1 right-0 left-0 flex justify-center text-gray-400">
           {formatDayMonth(event.dateTime)}
         </div>
       {/if}
 
-      <div class="flex w-fit max-w-full flex-col items-center">
+      <div class="flex w-fit max-w-full flex-col items-center gap-2">
         {#if event.url != null}
-          <a
-            href={event.url}
-            target="_blank"
-            rel="noopener"
-            class="decoration-none block w-full text-center"
-            class:rainbow-gradient={index === upNextIndex}
-          >
-            <h1 class="m-0 mb-2 text-center">{event.name}</h1>
-          </a>
+          <div>
+            <a
+              href={event.url}
+              target="_blank"
+              rel="noopener"
+              class="decoration-none block flex w-full items-center justify-center gap-1 text-center"
+              class:rainbow-gradient={index === upNextIndex}
+            >
+              <h1 class="m-0 text-center">{event.name}</h1>
+            </a>
+            <span class="bg-#eee h-2px mt-3px block w-full"></span>
+          </div>
         {:else}
-          <h1 class="m-0 mb-2 text-center" class:rainbow-gradient={index === upNextIndex}>
+          <h1 class="m-0 text-center" class:rainbow-gradient={index === upNextIndex}>
             {event.name}
           </h1>
         {/if}
