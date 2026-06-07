@@ -69,7 +69,7 @@
   </a>
 </div>
 
-<div class="flex h-full w-full flex-col items-center overflow-y-auto px-6 pb-20">
+<div class="flex h-full w-full flex-col items-center overflow-y-auto px-6 pb-50">
   {#each events as event, index (event.name)}
     <div
       id={`event-${index + 1}`}
