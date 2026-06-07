@@ -29,7 +29,7 @@
       end: addHours(now, 2),
     })
 
-    if (upNext || isSameDay) {
+    if ((upNext || isSameDay) && Date.now() <= date.getTime()) {
       const duration = intervalToDuration({
         start: now,
         end: date,
@@ -49,5 +49,5 @@
 </script>
 
 <FadeIn show={countdownString !== ""}>
-  <div class="tabular-nums sm:text-end">{countdownString}</div>
+  <div class="tabular-nums">{countdownString}</div>
 </FadeIn>

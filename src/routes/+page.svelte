@@ -73,7 +73,7 @@
   {#each events as event, index (event.name)}
     <div
       id={`event-${index + 1}`}
-      class="relative flex w-full flex-col items-center py-5"
+      class="relative flex w-full flex-col items-center pb-5"
       class:separator={shouldShowSeparator(index)}
       class:pt-8={shouldShowSeparator(index)}
     >
@@ -90,12 +90,12 @@
               href={event.url}
               target="_blank"
               rel="noopener"
-              class="decoration-none block flex w-full items-center justify-center gap-1 text-center"
+              class="decoration-none relative z-20 flex w-full items-center justify-center gap-1 text-center"
               class:rainbow-gradient={index === upNextIndex}
             >
-              <h1 class="m-0 text-center">{event.name}</h1>
+              <h1 class="m-0 py-1 text-center">{event.name}</h1>
             </a>
-            <span class="bg-#eee h-2px mt-3px block w-full"></span>
+            <span class="bg-#eee h-2px -mt-5px relative z-1 block w-full"></span>
           </div>
         {:else}
           <h1 class="m-0 text-center" class:rainbow-gradient={index === upNextIndex}>
@@ -103,14 +103,10 @@
           </h1>
         {/if}
 
-        <div
-          class="lt-sm:flex-col lt-sm:text-center flex w-130 max-w-full justify-between text-gray-300"
-        >
+        <div class="w-130 max-w-full flex-col justify-between text-center text-gray-300">
           <div>{formatDate(event.dateTime)}</div>
 
-          {#if upNextIndex <= index}
-            <Countdown {now} date={event.dateTime} upNext={upNextIndex === index} />
-          {/if}
+          <Countdown {now} date={event.dateTime} upNext={upNextIndex === index} />
         </div>
       </div>
     </div>
