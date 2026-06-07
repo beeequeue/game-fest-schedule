@@ -1,30 +1,18 @@
 <script lang="ts">
   import { format } from "date-fns"
-  import { onMount } from "svelte"
 
   import Countdown from "../components/countdown.svelte"
   import Timezone from "../components/timezone.svelte"
   import { events } from "../schedule"
+  import { useSyncedInterval } from "../utils"
 
   const formatDate = (date: Date) => format(date, "yyyy-MM-dd HH:mm")
   const formatDayMonth = (date: Date) => format(date, "MMMM do")
 
   let now = $state(Date.now())
-  onMount(() => {
-    let interval: number
-
-    setTimeout(
-      () => {
-        now = Date.now()
-        interval = setInterval(() => {
-          now = Date.now()
-        }, 1000) as unknown as number
-      },
-      1000 - (Date.now() % 1000) + 10,
-    )
-
-    return () => clearInterval(interval)
-  })
+  useSyncedInterval(() => {
+    now = Date.now()
+  }, 1000)
 
   const shouldShowSeparator = (index: number) => {
     const previous = events[index - 1]?.dateTime
@@ -36,9 +24,23 @@
     )
   }
 
-  const upNextIndex = events
-    .toSorted((a, b) => a.dateTime.getTime() - b.dateTime.getTime())
-    .findIndex(({ dateTime }) => Date.now() < dateTime.getTime())
+  const findUpNext = () => {
+    const now = Date.now()
+
+    return events
+      .toSorted((a, b) => a.dateTime.getTime() - b.dateTime.getTime())
+      .findIndex(({ dateTime }) => now < dateTime.getTime())
+  }
+  let upNextIndex = $state(findUpNext())
+
+  useSyncedInterval(() => {
+    if (upNextIndex === -1) return
+
+    const upNextDate = events[upNextIndex]!.dateTime
+    if (upNextDate.getTime() >= Date.now()) return
+
+    upNextIndex = findUpNext()
+  }, 1000)
 </script>
 
 <svelte:head>

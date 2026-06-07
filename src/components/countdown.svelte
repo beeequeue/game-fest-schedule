@@ -16,6 +16,7 @@
   }
 
   const { now, date, upNext }: CountdownProps = $props()
+  const isInPast = $derived(now > date.getTime())
 
   const formatToNow = (date: Date) => formatDistanceToNowStrict(date)
 
@@ -29,7 +30,7 @@
       end: addHours(now, 2),
     })
 
-    if ((upNext || isSameDay) && Date.now() <= date.getTime()) {
+    if ((upNext || isSameDay) && !isInPast) {
       const duration = intervalToDuration({
         start: now,
         end: date,
@@ -43,11 +44,11 @@
         zero: true,
       })}`
     } else {
-      return date.getTime() < now ? `${formatToNow(date)} ago` : `in ${formatToNow(date)}`
+      return isInPast ? `${formatToNow(date)} ago` : `in ${formatToNow(date)}`
     }
   })
 </script>
 
 <FadeIn show={countdownString !== ""}>
-  <div class="tabular-nums">{countdownString}</div>
+  <div class="tabular-nums" class:text-gray-500={isInPast}>{countdownString}</div>
 </FadeIn>
