@@ -17,10 +17,6 @@
     "exactOptionalPropertyTypes": false,
 
     // Extra types
-    "lib": ["dom", "es2025", "esnext.temporal"],
-    "types": ["node", "vite/client"]
-  },
-
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules", "dist", "copy.ts"]
+    "lib": ["dom", "es2025", "esnext.temporal"]
+  }
 }
