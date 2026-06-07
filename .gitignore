@@ -3,6 +3,7 @@
 /.svelte-kit/
 /build/
 /node_modules/
+/static/uno.css
 
 .idea/
 !.idea/jsLibraryMappings.xml

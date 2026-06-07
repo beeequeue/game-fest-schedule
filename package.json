@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "unocss src/**/*.svelte --minify --out-file static/uno.css && vite build",
     "lint": "eslint src",
     "prepare": "simple-git-hooks && svelte-kit sync",
     "start": "node build/index.js",
@@ -35,6 +35,7 @@
     "@tsconfig/node26": "26.0.0",
     "@tsconfig/strictest": "2.0.8",
     "@types/node": "25.9.1",
+    "@unocss/cli": "66.7.0",
     "@unocss/extractor-svelte": "66.7.0",
     "@unocss/preset-icons": "66.7.0",
     "@unocss/preset-uno": "66.7.0",
