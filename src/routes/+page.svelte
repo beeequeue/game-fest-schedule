@@ -1,0 +1,97 @@
+<script lang="ts">
+  import { format } from "date-fns"
+
+  import Countdown from "../components/countdown.svelte"
+  import Timezone from "../components/timezone.svelte"
+  import { events } from "../schedule"
+
+  const formatDate = (date: Date) => format(date, "yyyy-MM-dd HH:mm")
+  const formatDayMonth = (date: Date) => format(date, "MMMM do")
+
+  const shouldShowSeparator = (index: number) => {
+    const previous = events[index - 1]?.dateTime
+    const current = events[index]!.dateTime
+
+    return (
+      previous != null &&
+      (previous.getDate() !== current.getDate() || current.getMonth() !== previous.getMonth())
+    )
+  }
+
+  const upNextIndex = events
+    .toSorted((a, b) => a.dateTime.getTime() - b.dateTime.getTime())
+    .findIndex(({ dateTime }) => Date.now() < dateTime.getTime())
+</script>
+
+<svelte:head>
+  <title>Summer Game Fest Schedule</title>
+  <meta name="description" content="A simpler, better schedule for Summer Game Fest 2026" />
+</svelte:head>
+
+<div class="relative flex w-full items-center justify-center py-5">
+  <Timezone />
+
+  <a
+    href="https://bsky.app/profile/haglund.dev"
+    rel="noopener"
+    target="_blank"
+    class="absolute right-5 flex items-center py-2 pl-2 text-white"
+  >
+    beequeue
+    <div class="i-simple-icons:bluesky w-1.25em h-1.25em ml-1.5"></div>
+  </a>
+  <a
+    href="https://github.com/BeeeQueue/game-fest-schedule"
+    rel="noopener"
+    target="_blank"
+    class="absolute left-5 flex items-center py-2 pr-2 text-white"
+  >
+    <div class="i-simple-icons:github w-1.25em h-1.25em mr-1.5"></div>
+    Source
+  </a>
+</div>
+
+<div class="flex h-full w-full flex-col items-center overflow-y-auto px-6 pb-20">
+  {#each events as event, index (event.name)}
+    <div
+      id={`event-${index + 1}`}
+      class="relative flex w-full flex-col items-center py-5"
+      class:separator={shouldShowSeparator(index)}
+      class:pt-8={shouldShowSeparator(index)}
+    >
+      {#if shouldShowSeparator(index)}
+        <div class="md:left-25% absolute top-1 left-5 text-gray-400">
+          {formatDayMonth(event.dateTime)}
+        </div>
+      {/if}
+
+      <div class="flex w-fit max-w-full flex-col items-center">
+        {#if event.url != null}
+          <a
+            href={event.url}
+            target="_blank"
+            rel="noopener"
+            class="decoration-none block w-full text-center"
+            class:rainbow-gradient={index === upNextIndex}
+          >
+            <h1 class="m-0 mb-2 text-center">{event.name}</h1>
+          </a>
+        {:else}
+          <h1 class="m-0 mb-2 text-center" class:rainbow-gradient={index === upNextIndex}>
+            {event.name}
+          </h1>
+        {/if}
+
+        <div
+          class="lt-sm:flex-col lt-sm:text-center flex w-130 max-w-full justify-between text-gray-300"
+        >
+          <div>{formatDate(event.dateTime)}</div>
+
+          {#if upNextIndex <= index}
+            <Countdown date={event.dateTime} upNext={upNextIndex === index} />
+          {/if}
+        </div>
+      </div>
+    </div>
+  {/each}
+</div>

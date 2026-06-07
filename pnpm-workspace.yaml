@@ -1,3 +1,19 @@
+allowBuilds:
+  esbuild: false
+  sharp: false
+  simple-git-hooks: false
+
+dedupePeers: true
+dedupePeerDependents: true
+
+minimumReleaseAge: 4320
+minimumReleaseAgeExclude:
+  - "@sveltejs/adapter-node@6.0.0-next.0"
+  - "@sveltejs/kit@3.0.0-next.1"
+  - "@sveltejs/load-config@0.1.1"
+  - svelte-check@4.6.0
+  - svelte@5.56.2
+
 overrides:
   "@antfu/eslint-config>@eslint/markdown": "-"
   "@antfu/eslint-config>@stylistic/eslint-plugin": "-"
@@ -15,16 +31,6 @@ overrides:
   is-core-module: npm:@nolyfill/is-core-module@^1
   object.assign: npm:@nolyfill/object.assign@^1
   object.values: npm:@nolyfill/object.values@^1
-  vite: 7.3.5
-
-allowBuilds:
-  esbuild: false
-  sharp: false
-  simple-git-hooks: false
-
-minimumReleaseAge: 4320
-minimumReleaseAgeExclude:
-  - vite@7.3.5
 
 savePrefix: ""
 shellEmulator: true

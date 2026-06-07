@@ -1,3 +1,4 @@
+import extractorSvelte from "@unocss/extractor-svelte"
 import presetIcons from "@unocss/preset-icons"
 import presetUno from "@unocss/preset-uno"
 import presetWebFonts from "@unocss/preset-web-fonts"
@@ -10,19 +11,10 @@ export default {
     presetIcons(),
     presetWebFonts({
       fonts: {
-        sans: { name: "Satoshi", provider: "fontshare" },
+        sans: { name: "Averia Serif Libre" },
       },
     }),
   ],
+  extractors: [extractorSvelte()],
   transformers: [transformerDirectives()],
-  content: {
-    pipeline: {
-      include: [
-        // Generic JSX files
-        /\.tsx/,
-        // QRLs during Qwik dev, parsed JSX files during Qwik build
-        /_[\da-z]{11}\.js$/,
-      ],
-    },
-  },
 } satisfies VitePluginConfig

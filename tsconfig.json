@@ -1,15 +1,13 @@
 {
-  "extends": ["@tsconfig/node26/tsconfig.json", "@tsconfig/strictest/tsconfig.json"],
+  "extends": [
+    "@tsconfig/node26/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json",
+    "./.svelte-kit/tsconfig.json"
+  ],
   "compilerOptions": {
-    // Output
-    "noEmit": true,
     "sourceMap": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "@builder.io/qwik",
 
     // Modules
-    "module": "esnext",
-    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
 

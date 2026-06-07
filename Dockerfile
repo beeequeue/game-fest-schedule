@@ -28,7 +28,7 @@ RUN --mount=type=cache,target=/pnpm/store \
 
 FROM base_deps AS build
 
-COPY index.html package.json pnpm-workspace.yaml tsconfig.json unocss.config.ts vite.config.ts ./
+COPY src/app.html package.json pnpm-workspace.yaml tsconfig.json unocss.config.ts vite.config.ts ./
 COPY adapters/ adapters/
 COPY src/ src/
 
