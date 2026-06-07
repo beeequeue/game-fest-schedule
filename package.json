@@ -22,7 +22,7 @@
     "build": "vite build",
     "lint": "eslint src",
     "prepare": "simple-git-hooks && svelte-kit sync",
-    "start": "node asdad",
+    "start": "node build/index.js",
     "test": "vitest",
     "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json"
   },

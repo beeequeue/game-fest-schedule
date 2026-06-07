@@ -28,8 +28,7 @@ RUN --mount=type=cache,target=/pnpm/store \
 
 FROM base_deps AS build
 
-COPY src/app.html package.json pnpm-workspace.yaml tsconfig.json unocss.config.ts vite.config.ts ./
-COPY adapters/ adapters/
+COPY package.json pnpm-workspace.yaml tsconfig.json unocss.config.ts vite.config.ts ./
 COPY src/ src/
 
 RUN node --run build
@@ -38,8 +37,7 @@ FROM base
 
 COPY package.json pnpm-workspace.yaml ./
 
-COPY --from=build /app/dist/ dist/
-COPY --from=build /app/server/ server/
+COPY --from=build /app/build/ build/
 
 # Run with...
 # Source maps enabled, since it does not affect performance from what I found
@@ -47,4 +45,4 @@ ENV NODE_OPTIONS="--enable-source-maps"
 # Warnings disabled, we know what we're doing and they're annoying
 ENV NODE_NO_WARNINGS=1
 
-CMD ["node", "--run", "serve"]
+CMD ["node", "--run", "start"]
