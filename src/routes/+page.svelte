@@ -1,5 +1,6 @@
 <script lang="ts">
   import { format } from "date-fns"
+  import { onMount } from "svelte"
 
   import Countdown from "../components/countdown.svelte"
   import Timezone from "../components/timezone.svelte"
@@ -7,6 +8,23 @@
 
   const formatDate = (date: Date) => format(date, "yyyy-MM-dd HH:mm")
   const formatDayMonth = (date: Date) => format(date, "MMMM do")
+
+  let now = $state(Date.now())
+  onMount(() => {
+    let interval: number
+
+    setTimeout(
+      () => {
+        now = Date.now()
+        interval = setInterval(() => {
+          now = Date.now()
+        }, 1000) as unknown as number
+      },
+      1000 - (Date.now() % 1000) + 10,
+    )
+
+    return () => clearInterval(interval)
+  })
 
   const shouldShowSeparator = (index: number) => {
     const previous = events[index - 1]?.dateTime
@@ -91,7 +109,7 @@
           <div>{formatDate(event.dateTime)}</div>
 
           {#if upNextIndex <= index}
-            <Countdown date={event.dateTime} upNext={upNextIndex === index} />
+            <Countdown {now} date={event.dateTime} upNext={upNextIndex === index} />
           {/if}
         </div>
       </div>

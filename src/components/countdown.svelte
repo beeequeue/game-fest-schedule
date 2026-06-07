@@ -6,50 +6,45 @@
     intervalToDuration,
     isWithinInterval,
   } from "date-fns"
-  import { onMount } from "svelte"
 
   import FadeIn from "./fade-in.svelte"
 
   type CountdownProps = {
+    now: number // ms
     date: Date
     upNext: boolean
   }
 
-  const { date, upNext }: CountdownProps = $props()
+  const { now, date, upNext }: CountdownProps = $props()
 
   const formatToNow = (date: Date) => formatDistanceToNowStrict(date)
 
-  let countdownString = $state("")
+  const countdownString = $derived.by<string>(() => {
+    const isSameDay = isWithinInterval(date, {
+      start: now,
+      end: addHours(now, 24),
+    })
+    const isInNextHour = isWithinInterval(date, {
+      start: now,
+      end: addHours(now, 2),
+    })
 
-  onMount(() => {
-    setInterval(() => {
-      const now = new Date()
-      const isSameDay = isWithinInterval(date, {
+    if (upNext || isSameDay) {
+      const duration = intervalToDuration({
         start: now,
-        end: addHours(now, 24),
+        end: date,
       })
-      const isInNextHour = isWithinInterval(date, {
-        start: now,
-        end: addHours(now, 2),
-      })
-      if (upNext || isSameDay) {
-        const duration = intervalToDuration({
-          start: now,
-          end: date,
-        })
 
-        countdownString = `in ${formatDuration(duration, {
-          delimiter: ", ",
-          format: !isInNextHour
-            ? ["weeks", "days", "hours"]
-            : ["weeks", "days", "hours", "minutes", "seconds"],
-          zero: true,
-        })}`
-      } else {
-        countdownString =
-          date.getTime() < Date.now() ? `${formatToNow(date)} ago` : `in ${formatToNow(date)}`
-      }
-    }, 500)
+      return `in ${formatDuration(duration, {
+        delimiter: ", ",
+        format: !isInNextHour
+          ? ["weeks", "days", "hours"]
+          : ["weeks", "days", "hours", "minutes", "seconds"],
+        zero: true,
+      })}`
+    } else {
+      return date.getTime() < now ? `${formatToNow(date)} ago` : `in ${formatToNow(date)}`
+    }
   })
 </script>
 
