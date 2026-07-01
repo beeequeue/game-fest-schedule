@@ -35,10 +35,10 @@ importers:
         version: 1.2.84
       '@sveltejs/adapter-node':
         specifier: 6.0.0-next.0
-        version: 6.0.0-next.0(@sveltejs/kit@3.0.0-next.1)
+        version: 6.0.0-next.0(@sveltejs/kit@3.0.0-next.4)
       '@sveltejs/kit':
-        specifier: 3.0.0-next.1
-        version: 3.0.0-next.1(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.2)(typescript@6.0.3)(vite@8.0.16)
+        specifier: 3.0.0-next.4
+        version: 3.0.0-next.4(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.2)(typescript@6.0.3)(vite@8.0.16)
       '@sveltejs/vite-plugin-svelte':
         specifier: 7.1.2
         version: 7.1.2(svelte@5.56.2)(vite@8.0.16)
@@ -569,8 +569,8 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^3.0.0
 
-  '@sveltejs/kit@3.0.0-next.1':
-    resolution: {integrity: sha512-dcEulvtFYFqCRUpLLSB9AT+S0tjsLjAkr69qfxkvdK9RU+AmL1PvzP4b/jk+9xQUW7CuCSLC3XDa84lHHW8G9A==}
+  '@sveltejs/kit@3.0.0-next.4':
+    resolution: {integrity: sha512-AN9QgXeSdmzkdTo9FOhbBR9lPMHU8CUjkIBb889zsglL6guTNJjFnutkq7TqCzJK1PMWDJPvyeKdOI6ILH6ToA==}
     engines: {node: '>=22'}
     hasBin: true
     peerDependencies:
@@ -2198,12 +2198,12 @@ snapshots:
     dependencies:
       acorn: 8.16.0
 
-  '@sveltejs/adapter-node@6.0.0-next.0(@sveltejs/kit@3.0.0-next.1)':
+  '@sveltejs/adapter-node@6.0.0-next.0(@sveltejs/kit@3.0.0-next.4)':
     dependencies:
-      '@sveltejs/kit': 3.0.0-next.1(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.2)(typescript@6.0.3)(vite@8.0.16)
+      '@sveltejs/kit': 3.0.0-next.4(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.2)(typescript@6.0.3)(vite@8.0.16)
       rolldown: 1.0.3
 
-  '@sveltejs/kit@3.0.0-next.1(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.2)(typescript@6.0.3)(vite@8.0.16)':
+  '@sveltejs/kit@3.0.0-next.4(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.2)(typescript@6.0.3)(vite@8.0.16)':
     dependencies:
       '@standard-schema/spec': 1.1.0
       '@sveltejs/acorn-typescript': 1.0.10(acorn@8.16.0)
