@@ -6,9 +6,8 @@ import sonda from "sonda/vite"
 import { defineConfig } from "vite"
 
 export default defineConfig({
-  build: {
-    sourcemap: process.env.ANALYZE != null,
-  },
+  build: { sourcemap: process.env.ANALYZE != null },
+  css: { transformer: "lightningcss" },
 
   plugins: [
     unocss(),
