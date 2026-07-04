@@ -1,13 +1,13 @@
 import extractorSvelte from "@unocss/extractor-svelte"
 import presetIcons from "@unocss/preset-icons"
-import presetUno from "@unocss/preset-uno"
 import presetWebFonts from "@unocss/preset-web-fonts"
+import presetWind3 from "@unocss/preset-wind3"
 import transformerDirectives from "@unocss/transformer-directives"
 import type { VitePluginConfig } from "@unocss/vite"
 
 export default {
   presets: [
-    presetUno(),
+    presetWind3(),
     presetIcons(),
     presetWebFonts({
       fonts: {
