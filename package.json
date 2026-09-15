@@ -29,7 +29,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "9.1.0",
     "@iconify-json/simple-icons": "1.2.88",
-    "@sveltejs/adapter-node": "6.0.0-next.2",
+    "@sveltejs/adapter-node": "6.0.0-next.12",
     "@sveltejs/kit": "3.0.0-next.6",
     "@sveltejs/vite-plugin-svelte": "7.1.2",
     "@tsconfig/node26": "26.0.0",
