@@ -29,8 +29,8 @@ importers:
         specifier: 1.2.88
         version: 1.2.88
       '@sveltejs/adapter-node':
-        specifier: 6.0.0-next.2
-        version: 6.0.0-next.2(@sveltejs/kit@3.0.0-next.6)
+        specifier: 6.0.0-next.14
+        version: 6.0.0-next.14(@sveltejs/kit@3.0.0-next.6)
       '@sveltejs/kit':
         specifier: 3.0.0-next.6
         version: 3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.2)
@@ -559,10 +559,10 @@ packages:
     peerDependencies:
       acorn: ^8.9.0
 
-  '@sveltejs/adapter-node@6.0.0-next.2':
-    resolution: {integrity: sha512-+Gss30bfazCeE9cZKj5dYc7En0+HQMMTXz8j+TtZfuvUmNRnrLCndKgZ5JucsHt1y1Zal1jhM8WVGbG2jYB5iw==}
+  '@sveltejs/adapter-node@6.0.0-next.14':
+    resolution: {integrity: sha512-ho9IjT6naryno3uMLN559EhyWC+dTACLm7puVBRBZy63V0g3jRYh+FZouzSxNg/8ddksrjagOF67FKgugem3hw==}
     peerDependencies:
-      '@sveltejs/kit': ^3.0.0
+      '@sveltejs/kit': ^3.0.0-next.0
 
   '@sveltejs/kit@3.0.0-next.6':
     resolution: {integrity: sha512-hGuQHT7HYu6a4ea12LkihtJpYersl5eihgiaToVGjO2KojDg/6iEkEKt33fCjEnqziZNmomzuaMjzdPBAz8n3Q==}
@@ -2132,10 +2132,9 @@ snapshots:
     dependencies:
       acorn: 8.17.0
 
-  '@sveltejs/adapter-node@6.0.0-next.2(@sveltejs/kit@3.0.0-next.6)':
+  '@sveltejs/adapter-node@6.0.0-next.14(@sveltejs/kit@3.0.0-next.6)':
     dependencies:
       '@sveltejs/kit': 3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.2)
-      rolldown: 1.1.3
 
   '@sveltejs/kit@3.0.0-next.6(@sveltejs/vite-plugin-svelte@7.1.2)(svelte@5.56.4)(typescript@6.0.3)(vite@8.1.2)':
     dependencies:
