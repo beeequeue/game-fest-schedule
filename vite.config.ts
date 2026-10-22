@@ -5,12 +5,12 @@ import unocss from "@unocss/vite"
 import sonda from "sonda/vite"
 import { defineConfig } from "vite"
 
-export default defineConfig({
+export default defineConfig((env) => ({
   build: { sourcemap: process.env.ANALYZE != null },
   css: { transformer: "lightningcss" },
 
   plugins: [
-    unocss(),
+    unocss({ mode: env.command === "build" ? "per-module" : "global" }),
     sveltekit({
       adapter: adapter({ precompress: false }),
       // preprocess: vitePreprocess(),
@@ -23,4 +23,4 @@ export default defineConfig({
       "Cache-Control": "public, max-age=0",
     },
   },
-})
+}))
