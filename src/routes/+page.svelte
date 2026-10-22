@@ -45,7 +45,9 @@
 
   onMount(() => {
     if (upNextIndex === -1) return
-    document.getElementById(`event-${upNextIndex}`)?.scrollIntoView({ behavior: "smooth", inline: "center" })
+    document
+      .getElementById(`event-${upNextIndex}`)
+      ?.scrollIntoView({ behavior: "smooth", inline: "center" })
   })
 </script>
 
@@ -55,7 +57,7 @@
 </svelte:head>
 
 <!-- what the fuck? why is this element shoved to the left???? -->
-<div class="pl-11 flex items-center justify-between gap-2 py-5">
+<div class="flex items-center justify-between gap-2 py-5 pl-11">
   <a
     href="https://github.com/BeeeQueue/game-fest-schedule"
     rel="noopener"
@@ -99,7 +101,7 @@
             <a
               href={event.url}
               target="_blank"
-              rel="noopener"
+              rel="external noopener"
               class="decoration-none relative z-20 flex w-full items-center justify-center gap-1 text-center"
               class:rainbow-gradient={index === upNextIndex}
             >

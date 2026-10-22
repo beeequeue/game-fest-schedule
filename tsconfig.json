@@ -2,7 +2,7 @@
   "extends": [
     "@tsconfig/node26/tsconfig.json",
     "@tsconfig/strictest/tsconfig.json",
-    "./.svelte-kit/tsconfig.json"
+    "$app/tsconfig"
   ],
   "compilerOptions": {
     "sourceMap": true,
@@ -18,5 +18,7 @@
 
     // Extra types
     "lib": ["dom", "es2025", "esnext.temporal"]
-  }
+  },
+  "include": ["src", "*"],
+  "exclude": ["src/service-worker"]
 }
