@@ -7,9 +7,6 @@ dedupePeers: true
 dedupePeerDependents: true
 
 minimumReleaseAge: 4320
-minimumReleaseAgeExclude:
-  - "@sveltejs/adapter-node@6.0.0-next.2"
-  - "@sveltejs/kit@3.0.0-next.6"
 
 overrides:
   "@antfu/eslint-config>@eslint/markdown": "-"
