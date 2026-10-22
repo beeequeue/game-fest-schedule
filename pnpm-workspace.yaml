@@ -8,6 +8,11 @@ dedupePeerDependents: true
 
 minimumReleaseAge: 4320
 
+packageExtensions:
+  "@unocss/autocomplete":
+    dependencies:
+      "@unocss/core": "*"
+
 overrides:
   "@antfu/eslint-config>@eslint/markdown": "-"
   "@antfu/eslint-config>@stylistic/eslint-plugin": "-"

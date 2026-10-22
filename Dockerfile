@@ -1,4 +1,4 @@
-FROM node:26-alpine AS base
+FROM platformatic/node-caged:26-alpine AS base
 
 WORKDIR /app
 
@@ -8,6 +8,7 @@ ENV CI=1
 ENV NODE_ENV=production
 
 # Enable node compile cache
+ENV NODE_COMPILE_CACHE_PORTABLE=1
 ENV NODE_COMPILE_CACHE=/node-cc
 RUN mkdir -p $NODE_COMPILE_CACHE
 
@@ -42,7 +43,5 @@ COPY --from=build /app/build/ build/
 # Run with...
 # Source maps enabled, since it does not affect performance from what I found
 ENV NODE_OPTIONS="--enable-source-maps"
-# Warnings disabled, we know what we're doing and they're annoying
-ENV NODE_NO_WARNINGS=1
 
 CMD ["node", "--run", "start"]
