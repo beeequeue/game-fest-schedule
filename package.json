@@ -33,7 +33,7 @@
     "@sveltejs/vite-plugin-svelte": "7.3.1",
     "@tsconfig/node26": "26.0.1",
     "@tsconfig/strictest": "2.0.8",
-    "@types/node": "26.6.5",
+    "@types/node": "26.6.6",
     "@unocss/cli": "66.11.0",
     "@unocss/extractor-svelte": "66.11.0",
     "@unocss/preset-icons": "66.11.0",
